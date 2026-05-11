@@ -1,0 +1,23 @@
+project:
+  render: 
+    - index.qmd
+
+title: Functional Near-Infrared Spectroscopy in Neonatal Research
+subtitle: Experimental design, data analysis and real-data preprocessing with Python
+format:
+  revealjs:
+    scrollable: true
+
+authors:
+  - name: Gonzalo García-Castro
+  - affiliation: Institut de Recerca Sant Joan de Déu (IRSJD)
+
+date: 2026/05/15
+
+message: false
+warning: false
+freeze: auto
+
+css: style.css
+
+bibliography: bibliography.bib
