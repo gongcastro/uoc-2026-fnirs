@@ -1,0 +1,697 @@
+```{python}
+# | label: setup
+from pathlib import Path
+
+from matplotlib import pyplot as plt
+from matplotlib import colors
+import numpy as np
+import pandas as pd
+
+from cedalion.dataclasses import Recording
+
+from src import nirs
+
+plt.rcParams["figure.autolayout"] = True
+
+MOP_STIM_MAPPING = {
+    "A": [6, 7, 8, 9, 18, 19, 20, 21],
+    "B": [10, 11, 12, 13, 22, 23, 24, 25],
+    "C": [14, 15, 16, 17, 26, 27, 28, 29],
+}
+
+SSP_STIM_MAPPING: dict[str, list[int]] = {
+    "A": [9],
+    "B": [10],
+    "Exclude": [4, 6, 7],
+}
+
+CHROMO_COLORS = {760: "tab:blue", 850: "tab:red", "HbR": "tab:blue", "HbO": "tab:red"}
+COND_COLORS = {"A": "tab:blue", "B": "tab:orange", "C": "tab:green"}
+```
+
+## About us
+
+**NeuroDevelopment and Comparative Cognition (NeuroDevCo)**
+
+::: {.smaller}
+*HORIZON-ERC-2023-StG: GALA (Gates to Language)*
+:::
+
+![](img/thanks.png){fig-align="center"}
+
+## fNIRS
+
+***F**unctional **N**ear-**I**nfrared **S**pectroscopy*
+
+## fNIRS
+
+*[**F**unctional **N**ear-**I**nfrared]{style="color:lightgrey;"}* ***S**pectroscopy*
+
+## fNIRS
+
+*[**F**unctional **N**ear-**I**nfrared]{style="color:lightgrey;"}* ***S**pectroscopy*
+
+Some materials have **different optical properties** than others (e.g., they absorbe more light of some colors).
+
+![](img/magnetic-spectrum.png)
+
+## fNIRS
+
+*[**F**unctional **N**ear-**I**nfrared]{style="color:lightgrey;"}* ***S**pectroscopy*
+
+We can study the **composition of an object** by analysing how light behaves when passing through it (i.g., **spectroscopy**)
+
+
+![](img/spectroscopy.png)
+
+## fNIRS
+
+[***F**unctional*]{style="color:lightgrey;"} ***N**ear-**I**nfrared [Spectroscopy]{style="color:lightgrey;"}*
+
+
+## fNIRS
+
+[***F**unctional*]{style="color:lightgrey;"} ***N**ear-**I**nfrared [Spectroscopy]{style="color:lightgrey;"}*
+
+::: columns
+:::: {.column width="30%"}
+**Oxy-haemoglobin** (HbO) and **deoxy-haemoglobin** (HbR) absorb **near-infrared light** differently
+::::
+:::: {.column width="70%"}
+```{python}
+df = pd.read_csv(Path("data", "absorption.tsv"), sep="\t")
+df = df[(df.wavelength >= 650) & (df.wavelength <= 900)]
+
+fig, ax = plt.subplots(1, 1)
+fig.set_size_inches(7, 4)
+ax.plot(df.wavelength, df.hbo, c="tab:red", label="HbO", lw=2)
+ax.plot(df.wavelength, df.hbr, c="tab:blue", label="HbR", lw=2)
+ax.axvspan(690, 760, lw=0, color="tab:blue", alpha=1 / 4)
+ax.axvspan(830, 900, lw=0, color="tab:red", alpha=1 / 4)
+ax.set_ylabel("Molar Extinction Coefficient ($cm^{-1}/M$)")
+ax.set_xlabel("Wavelenth [$\\lambda$] (nm)")
+fig.legend(ncol=2)
+```
+
+::::
+:::
+
+## fNIRS
+
+***F**unctional* [***N**ear-**I**nfrared **S**pectroscopy*]{style="color:lightgrey;"}
+
+If we shine near-infrared light into biological tissue, we can estimate **changes in relative concentration** of HbO and HbR time (**functional**).
+
+## fNIRS
+
+***F**unctional* [***N**ear-**I**nfrared **S**pectroscopy*]{style="color:lightgrey;"}
+
+::: box
+modified Beer-Lambert Law (mBLL)
+:::
+
+* Models **changes in light absorption** of underlying tissue using continuous waves methods
+* Based on a generalization of **Beer-Lambert law**
+* Assumes that the scattering properties of tissue do not vary with time
+
+## fNIRS
+
+***F**unctional* [***N**ear-**I**nfrared **S**pectroscopy*]{style="color:lightgrey;"}
+
+::: box
+modified Beer-Lambert Law (mBLL)
+:::
+
+$$
+\begin{aligned}
+\Delta A(\lambda_1 = 760~nm) &= \text{DPF} \cdot r \cdot [  \epsilon_{HbO}(\lambda_1) \Delta c_{HbO} + \epsilon_{HbO}(\lambda_1) \Delta c_{HbO} ]  
+\\
+\Delta A(\lambda_2 = 850~nm) &= \text{DPF} \cdot r \cdot [  \epsilon_{HbO}(\lambda_2) \Delta c_{HbR} + \epsilon_{HbR}(\lambda_2) \Delta c_{HbR} ]
+\end{aligned}
+$$
+
+## fNIRS
+
+***F**unctional* [***N**ear-**I**nfrared **S**pectroscopy*]{style="color:lightgrey;"}
+
+![](img/sources.jpg)
+
+## fNIRS
+
+### The fNIRS Glossary project
+
+Community-sourced glossary [@stute2025fnirs]
+
+[https://openfnirs.org/standards/fnirs-glossary-project/](https://openfnirs.org/standards/fnirs-glossary-project/ )
+
+![](img/glossary.png)
+
+
+## fNIRS for experimental tasks
+
+::: {.columns}
+:::: {.column width="25%"}
+We are measuring the **BOLD** signal, which takes around 15 seconds to go back to baseline
+::::
+
+:::: {.column width="75%"}
+![](img/bold.png)
+::::
+:::
+
+## fNIRS for experimental tasks
+
+::: {.columns}
+:::: {.column width="25%"}
+**Canonical Haemodynamic Response Function (HRF)
+**
+::::
+
+:::: {.column width="75%"}
+![](img/bold-hrf.png)
+::::
+:::
+
+## fNIRS for experimental tasks
+
+Add resting periods accordingly in your experimental task
+
+::: {.columns}
+::: {.column width="25%"}
+We are measuring the **BOLD** signal, which takes around 15 seconds to go back to baseline
+:::
+
+::: {.column width="75%"}
+![](img/bold.png)
+:::
+:::
+
+## Why fNIRS
+
+* Commercially available (still pricey)
+* Relatively easy capping
+* Flexible and portable, robust to movement*
+* In development: Hight density, DOT
+
+## Limitations
+
+* Limited access to sub-cortical regions (~3 cm)*
+* Temporal resolution constrained by haemodynamics
+* Limited spatial resolution
+
+## Hardware
+
+Society for functional Near Infreared spectroscopy ([https://fnirs.org](https://fnirs.org))
+
+- [NIRx](https://nirx.net) (Germany): NIRSport2
+- [Artinis](https://www.artinis.com) (The Netherlands): Brite, OxyMon
+- [Hitachi](https://healthcaresolutions-us.fujifilm.com/) (Japan): ETG 4000
+- [GowerLabs](https://www.gowerlabs.co.uk/) (UK): LUMO (HD-DOT system)
+- [Cortivision](https://www.cortivision.com/) (Poland): Spectrum C23 fNIRS
+- [PIONIRS](https://www.pionirs.com/wp/) (Italy): NIRSBOX
+
+## fNIRS at the Hospital Sant Joan de Déu
+
+![](img/setup-1.jpg)
+![](img/setup-2.jpg)
+![](img/setup-3.jpg)
+
+## fNIRS at the Hospital Sant Joan de Déu
+
+{{< video img/setup.mp4 >}}
+
+## fNIRS in neonates
+
+**Canonical Haemodynamic Response Function (HRF)
+** 
+
+* True shape of the HRF is relatively unknown
+* Variability within-between participants
+* Variability between studies [@cristia20213; @lloyd2010]
+
+Candidate explanation: ongoing maturation of the neurovascular coupling barrier [@issard2018variability; @arichi2012development]
+
+## fNIRS in neonates
+
+[@issard2018variability]
+
+::: {.columns}
+:::: {.column}
+**Canonical response**
+
+![](img/issard2018.jpg)
+::::
+:::: {.column}
+::::
+:::
+
+## fNIRS in neonates
+
+[@issard2018variability]
+
+::: {.columns}
+:::: {.column}
+**Canonical response**
+
+![](img/issard2018.jpg)
+::::
+:::: {.column}
+**Inverted response**
+
+![](img/issard2018inverted.jpg)
+::::
+:::
+
+## Other pitfalls in neonatal fNIRS research
+
+* **Movement**, event during deep sleep
+* **Wakefulness state**: ~40 min. sleep cycles
+* **Head morphology**: spatial registration is challenging
+* **Environment**: hospital ward
+
+## Task design
+
+## Montage
+
+### devFOLD
+
+### NIRSite
+
+## Montage
+
+### What about short channels?
+
+### What about spatial corregistration?
+
+## Data collection
+
+## Data organisation: BIDS format
+
+[bids.neuroimaging.io](https://bids.neuroimaging.io)
+
+- Proposed **standard** for **neuroimaging** datasets (EEG, fNIRS, MRI, etc.)
+- Adopted and encouraged by the **Society for fNIRS** ([SFNIRS](https://fnirs.org/))
+- Increases **reproducibility**, transparency, and documentation
+- Ready to share in **BIDS-compliant** repositories (e.g., [OpenNeuro](https://openneuro.org/).)
+
+## Data organisation: BIDS format
+
+Luke, R., Oostenveld, R., Cockx, H., Niso, G., Shader, M. J., Orihuela-Espina, F., ... & Pollonini, L. (2025). NIRS-BIDS: brain imaging data structure extended to near-infrared spectroscopy. Scientific Data, 12(1), 159.
+
+![](img/luke.png)
+
+
+## Designing a preprocessing pipeline
+
+**The FRESH initiative**
+
+Yücel, M. A., Luke, R., Mesquita, R. C., von Lühmann, A., Mehler, D. M., Lührs, M., ... & Zemanek, V. (2025). **fNIRS reproducibility varies with data quality, analysis pipelines, and researcher experience**. *Communications biology*, 8(1), 1149.
+
+## Designing a preprocessing pipeline
+
+**The FRESH initiative**
+
+>Asked 38 research teams worldwide to independently analyze the same two fNIRS datasets.
+
+>Using different pipelines, **nearly 80% of teams agreed on group-level results**
+
+>Teams with higher self-reported analysis confidence, which correlated with years of fNIRS experience, showed greater agreement
+
+>**main sources of variability were related to how poor-quality data were handled**
+
+## Designing a preprocessing pipeline
+
+![](img/fresh-2.png)
+
+## Designing a preprocessing pipeline
+
+![](img/fresh.png)
+
+## Designing a preprocessing pipeline
+
+Gemignani, J., & Gervain, J. (2021). **Comparing different pre-processing routines for infant fNIRS data**. *Developmental Cognitive Neuroscience*, 48, 100943.
+
+## Designing a preprocessing pipeline
+
+::: incremental
+* Data **quality/inclusion trade-off**
+* Performance of all pipelines deteriorated with increasing levels of **noise**
+* Automatic correction of motion artifacts should be used cautiously, could result in false negatives, reduced effect sizes and an underestimation of the hemodynamic response
+* Applying pre-processing to optical densities or concentration changes achieved overall very similar results
+:::
+
+## Designing a preprocessing pipeline
+
+![](img/gemignani-2.jpg)
+
+
+## Pipeline suggestion
+
+1) **Transform to optical density**
+2) **Signal quality assessment** 
+3) Channel pruning
+4) Motion arctifact correction
+5) **Transform to ΔHbO and ΔHbR concentrations**
+6) Frequency filtering (physiological arctifact attenuation)
+7) Epoching and averaring
+9) Group-level data analysis
+
+## Software
+
+- Homer2/[Homer3](https://openfnirs.org/software/homer/) [@huppert2009homer]
+- [MNE-Python](https://mne.tools/stable/index.html) [@gramfort2013meg], [MNE-NIRS](https://mne.tools/mne-nirs/stable/index.html) [@luke2021analysis]
+- [AnalyzIR](https://github.com/huppertt/nirs-toolbox) [@santosa2018nirs]
+- [Brainstorm](https://neuroimage.usc.edu/brainstorm) [@tadel2011brainstorm], [NIRStorm](https://github.com/Nirstorm/nirstorm) [@delaire2025nirstorm] 
+- [OxySoft (Artinis)](https://www.artinis.com/oxysoft)
+- [NIRSTORM](https://github.com/Nirstorm/nirstorm)
+- [Fieldtrip](https://www.fieldtriptoolbox.org/)
+- [Cedalion](http://cedalion.tools/) [@middell2026cedalion]
+
+# Participant case study
+
+The good, the bad and the ugly
+
+
+* **Neonates**: García-Castro G., Sofocleous C., Gervain, J., Alarcón AllenA., and Santolin C. (in prep)
+* **Adults**: Hernández-Sauret, A., Garcia-Castro, G., & Redolar-Ripoll, E. (2026). *Brain Topography*, 39(1), 2.
+
+## The good: adult data
+
+```{python}
+#| echo: true
+from pathlib import Path
+from cedalion import io
+
+rec = io.read_snirf(Path("data/adult.snirf"))[0]
+
+print(rec)
+```
+
+<br>
+
+* `rec["amp"]`: Raw light intensity dataset
+* `rec["masks"]`: Signal quality masks
+* `rec["stim"]`: Dataset of events (e.g., stimulus triggers, annotations)
+* `rec["aux_ts"]`: Additional timeseries (e.g., accelerometer, heatbeat rate)
+
+## The good: adult data
+ 
+::: columns
+:::: {.column width="75%"}
+Plotting raw light intensity data with [matplotlib](https://matplotlib.org/):
+::::
+:::: {.column width="25%"}
+![](img/matplotlib-logo.png)
+::::
+:::
+
+```python
+from matplotlib import pyplot as plt
+
+amp = rec["amp"]
+
+fig, axes = plt.subplots(2, 1)
+
+for wl_i, wl in enumerate(amp.wavelength.values):
+    for ch in amp.channel.values:
+        d = amp.sel(wavelength=wl, channel=ch)
+        axes[wl_i].plot(d.time, d, c="k", alpha=0.5)
+```
+
+## The good: adult data
+
+```{python}
+from matplotlib import pyplot as plt
+
+amp = rec["amp"]
+
+fig, axes = plt.subplots(2, 1)
+
+for wl_i, wl in enumerate(amp.wavelength.values):
+    for ch in amp.channel.values:
+        d = amp.sel(wavelength=wl, channel=ch)
+        axes[wl_i].plot(d.time, d, c="k", alpha=0.5)
+```
+
+## The good: adult data
+
+```{python}
+from matplotlib import pyplot as plt
+
+amp = rec["amp"]
+
+fig, axes = plt.subplots(2, 1, sharey=True)
+
+colors = {760: "tab:blue", 850: "tab:red"}
+for wl_i, wl in enumerate(amp.wavelength.values):
+    ax = axes[wl_i]
+
+    for ch in amp.channel.values:
+        d = amp.sel(wavelength=wl, channel=ch)
+        ax.plot(d.time, d, c=colors[wl], lw=1, alpha=0.5)
+        ax.set_ylabel(f"{wl} nm")
+
+        if wl_i == 0:
+            ax.set_xticks([])
+_ = fig.supylabel("Amplitude (V)")
+_ = fig.supxlabel("Time (s)")
+```
+
+## The good: adult data
+
+```{python}
+channels = amp.channel.values[:1]
+fig, ax = plt.subplots(len(channels), 1)
+
+colors = {760: "tab:blue", 850: "tab:red"}
+
+ax.set_title(ch)
+
+for wl_i, wl in enumerate(amp.wavelength.values):
+    d = amp.sel(wavelength=wl, channel=ch)
+    ax.plot(d.time, d, c=colors[wl], lw=1, label=f"{wl:.0f} nm")
+
+_ = fig.supylabel("Amplitude (V)")
+_ = fig.supxlabel("Time (s)")
+fig.legend(ncols=2)
+```
+
+## The good: adult data
+
+```{python}
+channels = amp.channel.values[:3]
+times = (100, 130)
+
+fig, axes = plt.subplots(len(channels), 1)
+
+colors = {760: "tab:blue", 850: "tab:red"}
+
+for ch_i, ch in enumerate(channels):
+    ax = axes[ch_i]
+    ax.set_title(ch)
+    if ch_i != (len(channels) - 1):
+        ax.set_xticks([])
+
+    for wl_i, wl in enumerate(amp.wavelength.values):
+        d = amp.sel(wavelength=wl, channel=ch, time=slice(*times))
+        label = f"{wl:.0f} nm" if ch_i == 0 else None
+        ax.plot(d.time, d, c=colors[wl], lw=1, label=label)
+
+_ = fig.supylabel("Amplitude (V)")
+_ = fig.supxlabel("Time (s)")
+fig.legend(ncols=2)
+```
+
+## The bad: breastfeeding neonate
+
+```{python}
+file = Path("data/mop-breastfeeding.snirf")
+rec = io.read_snirf(file)[0]
+
+amp = rec["amp"]
+
+fig, axes = plt.subplots(2, 1, sharey=True)
+
+colors = {760: "tab:blue", 850: "tab:red"}
+for wl_i, wl in enumerate(amp.wavelength.values):
+    ax = axes[wl_i]
+
+    for ch in amp.channel.values:
+        d = amp.sel(wavelength=wl, channel=ch)
+        ax.plot(d.time, d, c=colors[wl], lw=1, alpha=0.5)
+        ax.set_ylabel(f"{wl} nm")
+
+        if wl_i == 0:
+            ax.set_xticks([])
+_ = fig.supylabel("Amplitude (V)")
+_ = fig.supxlabel("Time (s)")
+```
+
+## The bad: breastfeeding neonate
+
+```{python}
+channels = amp.channel.values[:3]
+fig, axes = plt.subplots(len(channels), 1)
+
+colors = {760: "tab:blue", 850: "tab:red"}
+
+for ch_i, ch in enumerate(channels):
+    ax = axes[ch_i]
+    ax.set_title(ch)
+    if ch_i != (len(channels) - 1):
+        ax.set_xticks([])
+
+    for wl_i, wl in enumerate(amp.wavelength.values):
+        d = amp.sel(wavelength=wl, channel=ch)
+        label = f"{wl:.0f} nm" if ch_i == 0 else None
+        ax.plot(d.time, d, c=colors[wl], lw=1, label=label)
+
+_ = fig.supylabel("Amplitude (V)")
+_ = fig.supxlabel("Time (s)")
+fig.legend(ncols=2)
+```
+
+## The bad: breastfeeding neonate
+
+```{python}
+ch = "S1D1"
+fig, ax = plt.subplots(2, 1)
+for wl_i, wl in enumerate(amp.wavelength.values):
+    d = amp.sel(wavelength=wl, channel=ch)
+    ax[wl_i].plot(d.time, d, c=colors[wl], lw=1)
+```
+
+## The bad: breastfeeding neonate
+
+```{python}
+ch = "S1D1"
+fig, ax = plt.subplots(1, 1)
+for wl_i, wl in enumerate(amp.wavelength.values):
+    d = amp.sel(wavelength=wl, channel=ch, time=slice(100, 160))
+    ax.plot(d.time, d, c=colors[wl], lw=1)
+```
+
+## The ugly: sleeping neonate
+
+```{python}
+file = Path("data/ssp-good.snirf")
+rec = io.read_snirf(file)[0]
+fig, ax = plt.subplots(2, 1)
+
+amp = rec["amp"]
+
+colors = {760: "tab:blue", 850: "tab:red"}
+for wl_i, wl in enumerate(amp.wavelength.values):
+    for ch in amp.channel.values:
+        d = amp.sel(wavelength=wl, channel=ch)
+        ax[wl_i].plot(d.time, d, c=colors[wl], lw=1 / 2, alpha=0.5)
+```
+
+## The ugly: sleeping neonate
+
+```{python}
+fig, ax = plt.subplots(2, 1)
+for wl_i, wl in enumerate(amp.wavelength.values):
+    for ch in amp.channel.values:
+        d = amp.sel(wavelength=wl, channel=ch)
+        ax[wl_i].plot(d.time, d, c=colors[wl], lw=1, alpha=0.1)
+```
+
+## The ugly: sleeping neonate
+
+```{python}
+ch = "S1D1"
+fig, ax = plt.subplots(2, 1)
+for wl_i, wl in enumerate(amp.wavelength.values):
+    d = amp.sel(wavelength=wl, channel=ch)
+    ax[wl_i].plot(d.time, d, c=colors[wl], lw=1)
+```
+
+## The ugly: sleeping neonate
+
+```{python}
+ch = "S1D1"
+fig, ax = plt.subplots(1, 1)
+for wl_i, wl in enumerate(amp.wavelength.values):
+    d = amp.sel(wavelength=wl, channel=ch, time=slice(250, 310))
+    ax.plot(d.time, d, c=colors[wl], lw=1)
+```
+
+## Signal quality: before data collection
+
+Calibration metrics:
+
+* Coefficient of variation (CV)
+* Signal-to-noise ratio (SNR)
+* Dark light
+
+## Signal quality: after data collection
+
+* Signal-to-noise ratio (SNR)
+* Scalp coupling index (SCI)
+* Peak spectral power (PSP)
+
+Can be used before data collection too! [@pollonini2016phoebe]
+
+## Signal quality: after data collection
+
+**Signal-to-noise ratio (SNR)**: Ratio of the average over variability of the signal.
+
+$$
+\text{SNR} = \frac{\bar{X}_{\lambda_i}}{\sigma_{X_{\lambda_i}}}
+$$
+
+
+## Signal quality: after data collection
+
+**Scalp coupling index (SCI)**: Index of optode coupling with scalp based on cardiac pulse [@pollonini2014auditory]
+
+1) Band-pass filter the signal in the heartbeat frequency of interest^[0.5-2.5 Hz in healthy adults, 1.17-3.17 Hz in neonates]
+2) Normalize time series and segment into rolling windows (e.g., 5 seconds)
+3) For each window: Zero-lag cross-correlation between time series in both wavelengths
+4) Compare against threshold
+$$
+\text{SCI} = \rho_{X_{\lambda_1}X_{\lambda_2}}(t=0) = \frac{{X_{\lambda_1}}_{t} - \bar{X}_{\lambda_1} , {X_{\lambda_2}}_{t} - \bar{X}_{\lambda_2}}{\sigma_{\lambda_1}\sigma_{\lambda_2}}
+$$
+
+## Signal quality: after data collection
+
+**Scalp coupling index (SCI)**: Index of optode coupling with scalp based on cardiac pulse [@pollonini2014auditory]
+
+*Limitation*: Motion arctifacts can inflate SCI (synchronised, high-amplitude perturbations in both signals)
+
+## Signal quality: after data collection
+
+**Peak spectral power (PSP)**: peak power of cross-correlation between both wavelengths in the hearbeat frequency range.
+
+1) Same as in SCI, now considering multiple lags (instead of just zero-lag)
+2) Get peak power across lags
+3) Compare against threshold
+
+Recommended in combination to SCI [@pollonini2016phoebe]
+
+## Signal quality: choosing thresholds
+
+Sample size vs. data quality trade-off.
+
+Recommendations:
+
+* Adults: *SCI*=0.8, *PSP*=0.1 [@pollonini2016phoebe]
+* Infants: *SCI*=0.6, *PSP*=0.04-0.05 [@beaton2026investigating]
+
+## Channel pruning
+
+Channels with less than some threshold proportion of above-threshold windows are excluded from further analyses (e.g., 0.7).
+
+Interpolation? Work in progress.
+
+## Skin and hair type
+
+@yucel2025quantifying:
+
+* Fitzpatrick Skin Phototype Scale (I, II, III, IV)
+* Fischer-Saller Scale, Andre Walker Hair Typing System, and the FIA Hair Typing System
+
+
+## References
+
