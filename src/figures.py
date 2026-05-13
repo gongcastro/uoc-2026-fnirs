@@ -85,7 +85,6 @@ for wl_i, wl in enumerate(amp.wavelength.values):
     for ch in amp.channel.values:
         d = amp.sel(wavelength=wl, channel=ch)
         axes[wl_i].plot(d.time, d, c="k", alpha=0.5)
-fig.legend(ncols=2)
 fig.savefig(PATH / "good-amp-1.png", dpi=DPI)
 
 #### good amp 2 ########################################
@@ -95,10 +94,10 @@ fig, axes = plt.subplots(2, 1, sharey=True)
 for wl_i, wl in enumerate(amp.wavelength.values):
     ax = axes[wl_i]
 
-    for ch in amp.channel.values:
+    for ch_i, ch in enumerate(amp.channel.values):
         d = amp.sel(wavelength=wl, channel=ch)
-        ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, alpha=0.5)
-        ax.set_ylabel(f"{wl:.0f} nm")
+        label = f"{wl:.0f} nm" if ch_i == 0 else None
+        ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, alpha=0.5, label=label)
 
         if wl_i == 0:
             ax.set_xticks([])
@@ -108,24 +107,30 @@ fig.legend(ncols=2)
 
 fig.savefig(PATH / "good-amp-2.png", dpi=DPI)
 
-#### good amp 4 ########################################
+#### good amp 3 ########################################
 
-channels = amp.channel.values[:1]
-fig, ax = plt.subplots(len(channels), 1)
+channels = amp.channel.values[:3]
 
-ax.set_title(ch)
+fig, axes = plt.subplots(len(channels), 1)
+for ch_i, ch in enumerate(channels):
+    ax = axes[ch_i]
+    ax.set_title(ch)
+    if ch_i != (len(channels) - 1):
+        ax.set_xticks([])
 
-for wl_i, wl in enumerate(amp.wavelength.values):
-    d = amp.sel(wavelength=wl, channel=ch)
-    ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, label=f"{wl:.0f} nm")
+    for wl_i, wl in enumerate(amp.wavelength.values):
+        d = amp.sel(wavelength=wl, channel=ch)
+        label = f"{wl:.0f} nm" if ch_i == 0 else None
+        ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, label=label)
 
 _ = fig.supylabel("Optical density")
 _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
 fig.savefig(PATH / "good-amp-3.png", dpi=DPI)
 
-channels = amp.channel.values[:3]
-times = (100, 130)
+#### good amp 4 ########################################
+
+times = (100, 140)
 
 fig, axes = plt.subplots(len(channels), 1)
 for ch_i, ch in enumerate(channels):
@@ -143,7 +148,6 @@ _ = fig.supylabel("Optical density")
 _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
 fig.savefig(PATH / "good-amp-4.png", dpi=DPI)
-
 
 #### good od 1 ########################################
 
@@ -186,7 +190,7 @@ fig.savefig(PATH / "good-od-2.png", dpi=DPI)
 #### good od 3 #####################################
 
 channels = od.channel.values[:3]
-times = (100, 130)
+times = (100, 140)
 
 fig, axes = plt.subplots(len(channels), 1)
 for ch_i, ch in enumerate(channels):
@@ -205,7 +209,71 @@ _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
 fig.savefig(PATH / "good-od-3.png", dpi=DPI)
 
-#### bad 1 #####################################
+#### bad amp 1 #####################################
+
+amp = rec_bad["amp"]
+
+fig, axes = plt.subplots(2, 1, sharey=True)
+for wl_i, wl in enumerate(amp.wavelength.values):
+    ax = axes[wl_i]
+
+    for ch_i, ch in enumerate(amp.channel.values):
+        d = amp.sel(wavelength=wl, channel=ch)
+        label = f"{wl:.0f} nm" if ch_i == 0 else None
+        ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, alpha=0.5, label=label)
+
+        if wl_i == 0:
+            ax.set_xticks([])
+
+_ = fig.supylabel("Amplitude (V)")
+_ = fig.supxlabel("Time (s)")
+fig.legend(ncol=2)
+fig.savefig(PATH / "bad-amp-1.png", dpi=DPI)
+
+#### bad amp 2 #####################################
+
+channels = amp.channel.values[:3]
+fig, axes = plt.subplots(len(channels), 1)
+
+for ch_i, ch in enumerate(channels):
+    ax = axes[ch_i]
+    ax.set_title(ch)
+    if ch_i != (len(channels) - 1):
+        ax.set_xticks([])
+
+    for wl_i, wl in enumerate(amp.wavelength.values):
+        d = amp.sel(wavelength=wl, channel=ch)
+        label = f"{wl:.0f} nm" if ch_i == 0 else None
+        ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, label=label)
+
+_ = fig.supylabel("Amplitude (V)")
+_ = fig.supxlabel("Time (s)")
+fig.legend(ncols=2)
+fig.savefig(PATH / "bad-amp-2.png", dpi=DPI)
+
+#### bad amp 3 #####################################
+
+channels = amp.channel.values[:3]
+times = (100, 140)
+
+fig, axes = plt.subplots(len(channels), 1)
+for ch_i, ch in enumerate(channels):
+    ax = axes[ch_i]
+    ax.set_title(ch)
+    if ch_i != (len(channels) - 1):
+        ax.set_xticks([])
+
+    for wl_i, wl in enumerate(amp.wavelength.values):
+        d = amp.sel(wavelength=wl, channel=ch, time=slice(*times))
+        label = f"{wl:.0f} nm" if ch_i == 0 else None
+        ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, label=label)
+
+_ = fig.supylabel("Amplitude (V)")
+_ = fig.supxlabel("Time (s)")
+fig.legend(ncols=2)
+fig.savefig(PATH / "bad-amp-3.png", dpi=DPI)
+
+#### bad od 1 #####################################
 
 rec_bad["od"] = cw.int2od(rec_bad["amp"])
 od = rec_bad["od"]
@@ -214,18 +282,20 @@ fig, axes = plt.subplots(2, 1, sharey=True)
 for wl_i, wl in enumerate(od.wavelength.values):
     ax = axes[wl_i]
 
-    for ch in od.channel.values:
+    for ch_i, ch in enumerate(od.channel.values):
         d = od.sel(wavelength=wl, channel=ch)
-        ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, alpha=0.5)
-        ax.set_ylabel(f"{wl:.0f} nm")
+        label = f"{wl:.0f} nm" if ch_i == 0 else None
+        ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, alpha=0.5, label=label)
 
         if wl_i == 0:
             ax.set_xticks([])
+
 _ = fig.supylabel("Optical density")
 _ = fig.supxlabel("Time (s)")
+fig.legend(ncol=2)
 fig.savefig(PATH / "bad-od-1.png", dpi=DPI)
 
-#### bad 2 #####################################
+#### bad od 2 #####################################
 
 channels = od.channel.values[:3]
 fig, axes = plt.subplots(len(channels), 1)
@@ -246,26 +316,10 @@ _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
 fig.savefig(PATH / "bad-od-2.png", dpi=DPI)
 
-#### bad 3 #######################################
-
-channels = od.channel.values[:1]
-fig, ax = plt.subplots(len(channels), 1)
-
-ax.set_title(ch)
-
-for wl_i, wl in enumerate(od.wavelength.values):
-    d = od.sel(wavelength=wl, channel=ch)
-    ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, label=f"{wl:.0f} nm")
-
-_ = fig.supylabel("Optical density")
-_ = fig.supxlabel("Time (s)")
-fig.legend(ncols=2)
-fig.savefig(PATH / "bad-od-3.png", dpi=DPI)
-
-#### bad od 4 #####################################
+#### bad od 3 #####################################
 
 channels = od.channel.values[:3]
-times = (100, 130)
+times = (100, 140)
 
 fig, axes = plt.subplots(len(channels), 1)
 for ch_i, ch in enumerate(channels):
@@ -282,9 +336,71 @@ for ch_i, ch in enumerate(channels):
 _ = fig.supylabel("Optical density")
 _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
-fig.savefig(PATH / "bad-od-4.png", dpi=DPI)
+fig.savefig(PATH / "bad-od-3.png", dpi=DPI)
 
-#### ugly 2 #####################################
+#### ugly amp 1 #####################################
+
+amp = rec_ugly["amp"]
+
+fig, axes = plt.subplots(2, 1, sharey=True)
+for wl_i, wl in enumerate(amp.wavelength.values):
+    ax = axes[wl_i]
+
+    for ch in amp.channel.values:
+        d = amp.sel(wavelength=wl, channel=ch)
+        ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, alpha=0.5)
+        ax.set_ylabel(f"{wl:.0f} nm")
+
+        if wl_i == 0:
+            ax.set_xticks([])
+_ = fig.supylabel("Amplitude (V)")
+_ = fig.supxlabel("Time (s)")
+fig.savefig(PATH / "ugly-amp-1.png", dpi=DPI)
+
+#### ugly amp 2 #####################################
+
+channels = amp.channel.values[:3]
+fig, axes = plt.subplots(len(channels), 1)
+
+for ch_i, ch in enumerate(channels):
+    ax = axes[ch_i]
+    ax.set_title(ch)
+    if ch_i != (len(channels) - 1):
+        ax.set_xticks([])
+
+    for wl_i, wl in enumerate(amp.wavelength.values):
+        d = amp.sel(wavelength=wl, channel=ch)
+        label = f"{wl:.0f} nm" if ch_i == 0 else None
+        ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, label=label)
+
+_ = fig.supylabel("Amplitude (V)")
+_ = fig.supxlabel("Time (s)")
+fig.legend(ncols=2)
+fig.savefig(PATH / "ugly-amp-2.png", dpi=DPI)
+
+#### ugly od 3 #####################################
+
+channels = amp.channel.values[:3]
+times = (100, 140)
+
+fig, axes = plt.subplots(len(channels), 1)
+for ch_i, ch in enumerate(channels):
+    ax = axes[ch_i]
+    ax.set_title(ch)
+    if ch_i != (len(channels) - 1):
+        ax.set_xticks([])
+
+    for wl_i, wl in enumerate(amp.wavelength.values):
+        d = amp.sel(wavelength=wl, channel=ch, time=slice(*times))
+        label = f"{wl:.0f} nm" if ch_i == 0 else None
+        ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, label=label)
+
+_ = fig.supylabel("Optical density")
+_ = fig.supxlabel("Time (s)")
+fig.legend(ncols=2)
+fig.savefig(PATH / "ugly-amp-3.png", dpi=DPI)
+
+#### ugly od 1 #####################################
 
 rec_ugly["od"] = cw.int2od(rec_ugly["amp"])
 od = rec_ugly["od"]
@@ -304,7 +420,7 @@ _ = fig.supylabel("Optical density")
 _ = fig.supxlabel("Time (s)")
 fig.savefig(PATH / "ugly-od-1.png", dpi=DPI)
 
-#### ugly 2 #####################################
+#### ugly od 2 #####################################
 
 channels = od.channel.values[:3]
 fig, axes = plt.subplots(len(channels), 1)
@@ -325,26 +441,10 @@ _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
 fig.savefig(PATH / "ugly-od-2.png", dpi=DPI)
 
-#### bad 3 #######################################
-
-channels = od.channel.values[:1]
-fig, ax = plt.subplots(len(channels), 1)
-
-ax.set_title(ch)
-
-for wl_i, wl in enumerate(od.wavelength.values):
-    d = od.sel(wavelength=wl, channel=ch)
-    ax.plot(d.time, d, c=CHROMO_COLORS[wl], lw=1, label=f"{wl:.0f} nm")
-
-_ = fig.supylabel("Optical density")
-_ = fig.supxlabel("Time (s)")
-fig.legend(ncols=2)
-fig.savefig(PATH / "ugly-od-3.png", dpi=DPI)
-
-#### ugly od 4 #####################################
+#### ugly od 3 #####################################
 
 channels = od.channel.values[:3]
-times = (100, 130)
+times = (100, 140)
 
 fig, axes = plt.subplots(len(channels), 1)
 for ch_i, ch in enumerate(channels):
@@ -361,7 +461,7 @@ for ch_i, ch in enumerate(channels):
 _ = fig.supylabel("Optical density")
 _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
-fig.savefig(PATH / "ugly-od-4.png", dpi=DPI)
+fig.savefig(PATH / "ugly-od-3.png", dpi=DPI)
 
 #### scalp coupling index 1 ############################
 
@@ -643,7 +743,7 @@ for ch_i, ch in enumerate(conc.channel.values):
             label = chromo
         ax.plot(d.time, d, c=CHROMO_COLORS[chromo], lw=1, label=label, alpha=0.5)
 
-_ = fig.supylabel("$\Delta$μM/L")
+_ = fig.supylabel("Chromophore concentration ($\\Delta$μM/L)")
 _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
 fig.savefig(PATH / "conc-1.png", dpi=DPI)
@@ -666,7 +766,7 @@ for ch_i, ch in enumerate(channels):
         ax.plot(d.time, d, c=CHROMO_COLORS[chromo], lw=1, label=label)
     ax.set_title(ch)
 
-_ = fig.supylabel("$\Delta$μM/L")
+_ = fig.supylabel("Chromophore concentration ($\\Delta$μM/L)")
 _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
 fig.savefig(PATH / "conc-2.png", dpi=DPI)
@@ -689,7 +789,7 @@ for ch_i, ch in enumerate(channels):
         ax.plot(d.time, d, c=CHROMO_COLORS[chromo], lw=1, label=label)
     ax.set_title(ch)
 
-_ = fig.supylabel("$\Delta$μM/L")
+_ = fig.supylabel("Chromophore concentration ($\\Delta$μM/L)")
 _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
 fig.savefig(PATH / "conc-3.png", dpi=DPI)
@@ -730,7 +830,7 @@ for ax in (ax_raw, ax_filt):
     ax.xaxis.set_major_formatter(ScalarFormatter())
 
 _ = fig.supxlabel("Frequency (Hz)")
-_ = fig.supylabel("CSD Magnitude in $$\Delta$μM/L^2/Hz$")
+_ = fig.supylabel("CSD Magnitude in $\DeltaμM/L^2/Hz$")
 ax_raw.set_title("Before band-pass filtering")
 ax_filt.set_title("After band-pass filtering")
 
@@ -755,7 +855,7 @@ for ch_i, ch in enumerate(channels):
 ax_before.set_title("Before frequency filtering")
 ax_after.set_title("After frequency filtering")
 fig.suptitle(channels[0])
-_ = fig.supylabel("$\Delta$μM/L")
+_ = fig.supylabel("Chromophore concentration ($\\Delta$μM/L)")
 _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
 fig.savefig(PATH / "csd-2.png", dpi=DPI)
@@ -780,7 +880,7 @@ for ch_i, ch in enumerate(channels):
 ax_before.set_title("Before frequency filtering")
 ax_after.set_title("After frequency filtering")
 fig.suptitle(channels[0])
-_ = fig.supylabel("$\Delta$μM/L")
+_ = fig.supylabel("Chromophore concentration ($\\Delta$μM/L)")
 _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
 fig.savefig(PATH / "csd-3.png", dpi=DPI)
@@ -804,7 +904,7 @@ for ch_i, ch in enumerate(channels):
 ax_before.set_title("Before frequency filtering")
 ax_after.set_title("After frequency filtering")
 fig.suptitle(channels[0])
-_ = fig.supylabel("$\Delta$μM/L")
+_ = fig.supylabel("Chromophore concentration ($\\Delta$μM/L)")
 _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
 fig.savefig(PATH / "csd-4.png", dpi=DPI)
@@ -829,7 +929,7 @@ for ch_i, ch in enumerate(channels):
 ax_before.set_title("Before frequency filtering")
 ax_after.set_title("After frequency filtering")
 fig.suptitle(channels[0])
-_ = fig.supylabel("$\Delta$μM/L")
+_ = fig.supylabel("Chromophore concentration ($\\Delta$μM/L)")
 _ = fig.supxlabel("Time (s)")
 fig.legend(ncols=2)
 fig.savefig(PATH / "csd-5.png", dpi=DPI)
@@ -850,7 +950,7 @@ for i, ch in enumerate(channels):
     ax.set_title(f"{ch}")
     # add stim markers using Cedalion's plot_stim_markers function
     vbx.plot_stim_markers(ax, rec_ugly.stim, y=1)
-    ax.set_ylabel(r"$\Delta$μM/L")
+    ax.set_ylabel(r"Chromophore concentration ($\\Delta$μM/L)")
 
 ax.legend(ncol=6)
 ax.set_label("Time (s)")
@@ -877,7 +977,7 @@ for i, ch in enumerate(channels):
         ],
         y=1,
     )
-    ax.set_ylabel(r"$\Delta$μM/L")
+    ax.set_ylabel(r"Chromophore concentration ($\\Delta$μM/L)")
 
 ax.legend(ncol=6)
 ax.set_label("Time (s)")
@@ -920,6 +1020,6 @@ for t_i, trial_type in enumerate(hrf.trial_type.values):
 
 fig.legend(ncol=2)
 fig.supxlabel("Time (s)")
-fig.supylabel(r"$\Delta$μM/L")
+fig.supylabel(r"Chromophore concentration ($\\Delta$μM/L)")
 fig.tight_layout()
 fig.savefig(PATH / "epochs-3.png", dpi=DPI)

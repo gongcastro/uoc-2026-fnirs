@@ -18,6 +18,7 @@ authors:
 date: 2026/05/15
 date-format: long
 email-obfuscation: javascript
+code-annotations: below
 slide-number: c
 scrollable: false
 progress: false

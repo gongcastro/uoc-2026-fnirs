@@ -37,150 +37,119 @@ rec.stim = rec.stim[rec.stim["trial_type"] != "Exclude"]
 
 ![](img/thanks.png){fig-align="center"}
 
-## fNIRS
+## Functional Near-Infrared Spectroscopy
 
-***F**unctional **N**ear-**I**nfrared **S**pectroscopy*
 
-## fNIRS
+## [Functional Near-Infrared]{.lightgrey} Spectroscopy
 
-*[**F**unctional **N**ear-**I**nfrared]{.lightgrey}* ***S**pectroscopy*
-
-## fNIRS
-
-*[**F**unctional **N**ear-**I**nfrared]{.lightgrey}* ***S**pectroscopy*
+## [Functional Near-Infrared]{.lightgrey} Spectroscopy
 
 Some materials have **different optical properties** than others (e.g., they absorbe more light of some colors).
 
-![](img/magnetic-spectrum.png)
+![](img/magnetic-spectrum.png){fig-align="center"}
 
-## fNIRS
-
-*[**F**unctional **N**ear-**I**nfrared]{.lightgrey}* ***S**pectroscopy*
+## [Functional Near-Infrared]{.lightgrey} Spectroscopy
 
 We can study the **composition of an object** by analysing how light behaves when passing through it (i.g., **spectroscopy**)
 
-![](img/spectroscopy.png)
+![](img/spectroscopy.png){fig-align="center"}
 
-## fNIRS
-
-[***F**unctional*]{.lightgrey} ***N**ear-**I**nfrared [Spectroscopy]{.lightgrey}*
-
-## fNIRS
-
-[***F**unctional*]{.lightgrey} ***N**ear-**I**nfrared [Spectroscopy]{.lightgrey}*
+## [Functional]{.lightgrey} Near-Infrared [Spectroscopy]{.lightgrey}
 
 
-**Oxy-haemoglobin** (HbO) and **deoxy-haemoglobin** (HbR) absorb **near-infrared light** differently
+## [Functional]{.lightgrey} Near-Infrared [Spectroscopy]{.lightgrey}
+
+**Oxy-haemoglobin** ([HbO]{.red}) and **deoxy-haemoglobin** ([HbR]{.blue}) absorb **near-infrared light** differently
 
 ![NIR light absorption by Hb](img/hb-absorption.png)
 
+## Functional [Near-Infrared Spectroscopy]{.lightgrey}
 
-## fNIRS
+If we shine near-infrared light into biological tissue, we can estimate **changes in relative concentration** of [HbO]{.red} and [HbR]{.blue} time
 
-***F**unctional* [***N**ear-**I**nfrared **S**pectroscopy*]{style="color:lightgrey;"}
-
-If we shine near-infrared light into biological tissue, we can estimate **changes in relative concentration** of HbO and HbR time (**functional**).
-
-## fNIRS
-
-***F**unctional* [***N**ear-**I**nfrared **S**pectroscopy*]{style="color:lightgrey;"}
-
-::: box
-modified Beer-Lambert Law (mBLL)
+::: {.box .center}
+**modified Beer-Lambert Law (mBLL)**
 :::
 
-* Models **changes in light absorption** of underlying tissue using continuous waves methods
+* Describes **changes in light absorption** of underlying tissue using continuous waves methods
 * Based on a generalization of **Beer-Lambert law**
 * Assumes that the scattering properties of tissue do not vary with time
 
-## fNIRS
+## Functional [Near-Infrared Spectroscopy]{.lightgrey}
 
-***F**unctional* [***N**ear-**I**nfrared **S**pectroscopy*]{style="color:lightgrey;"}
+<br>
+<br>
 
-::: box
-modified Beer-Lambert Law (mBLL)
+::: {.columns}
+:::: {.column}
+* Blood-Oxygen-Level-Dependent (**BOLD**) response
+* **Surplus of [HbO]{.red}** sent to recently active brain areas
+* Takes ~15 seconds recover baseline
+::::
+
+:::: {.column}
+![](img/bold.png){fig-align="center"}
+::::
 :::
 
-$$
-\begin{aligned}
-\Delta A(\lambda_1 = 760~nm) &= \text{DPF} \cdot r \cdot [  \epsilon_{HbO}(\lambda_1) \Delta c_{HbO} + \epsilon_{HbO}(\lambda_1) \Delta c_{HbO} ]  
-\\
-\Delta A(\lambda_2 = 850~nm) &= \text{DPF} \cdot r \cdot [  \epsilon_{HbO}(\lambda_2) \Delta c_{HbR} + \epsilon_{HbR}(\lambda_2) \Delta c_{HbR} ]
-\end{aligned}
-$$
+## Functional [Near-Infrared Spectroscopy]{.lightgrey}
 
-## fNIRS
+<br>
+<br>
 
-***F**unctional* [***N**ear-**I**nfrared **S**pectroscopy*]{style="color:lightgrey;"}
+**Canonical Haemodynamic Response Function (HRF)**
 
-![](img/sources.jpg)
+![](img/bold-hrf.png){fig-align="center"}
 
-## fNIRS
+## Resources
 
-### The fNIRS Glossary project
-
-Community-sourced glossary [@stute2025fnirs]
+**The fNIRS Glossary project** [@stute2025fnirs]
 
 [https://openfnirs.org/standards/fnirs-glossary-project/](https://openfnirs.org/standards/fnirs-glossary-project/ )
 
-![](img/glossary.png)
+![](img/glossary.png){fig-align="center"}
 
+## Resources
 
-## fNIRS for experimental tasks
+Society for Functional Near Infrared Spectroscopy ([SFNIRS](https://fnirs.org))
 
-::: {.columns}
-:::: {.column width="25%"}
-We are measuring the **BOLD** signal, which takes around 15 seconds to go back to baseline
-::::
-
-:::: {.column width="75%"}
-![](img/bold.png)
-::::
-:::
+![](img/sfnirs.png){fig-align="center"}
 
 ## fNIRS for experimental tasks
 
-::: {.columns}
-:::: {.column width="25%"}
-**Canonical Haemodynamic Response Function (HRF)
-**
-::::
-
-:::: {.column width="75%"}
-![](img/bold-hrf.png)
-::::
-:::
+![](img/sources.jpg){fig-align="center"}
 
 ## fNIRS for experimental tasks
 
-Add resting periods accordingly in your experimental task
+<br>
+<br>
 
 ::: {.columns}
-::: {.column width="25%"}
-We are measuring the **BOLD** signal, which takes around 15 seconds to go back to baseline
-:::
+::: {.column}
 
-::: {.column width="75%"}
-![](img/bold.png)
-:::
-:::
-
-## Why fNIRS
+### Advantages
 
 * Commercially available (still pricey)
 * Relatively easy capping
 * Flexible and portable, robust to movement*
-* In development: Hight density, DOT
+* Hight-density diffuse optical tomography (HD-DOT) [@culver2001optimization]
+:::
 
-## Limitations
+::: {.column}
 
-* Limited access to sub-cortical regions (~3 cm)^[But see Diffuse Ooptical Tomography (DOT) [@culver2001optimization]]
+### Limitations
+
+* Limited access to sub-cortical regions (~3 cm)*
 * Temporal resolution constrained by haemodynamics
+* Relatively pricey
 * Limited spatial resolution
+:::
+:::
 
 ## Hardware
 
-Society for functional Near Infreared spectroscopy ([https://fnirs.org](https://fnirs.org))
+<br>
+<br>
 
 - [NIRx](https://nirx.net) (Germany): NIRSport2
 - [Artinis](https://www.artinis.com) (The Netherlands): Brite, OxyMon
@@ -189,36 +158,103 @@ Society for functional Near Infreared spectroscopy ([https://fnirs.org](https://
 - [Cortivision](https://www.cortivision.com/) (Poland): Spectrum C23 fNIRS
 - [PIONIRS](https://www.pionirs.com/wp/) (Italy): NIRSBOX
 
+
+# fNIRS in neonates
+
 ## fNIRS at the Hospital Sant Joan de Déu
 
-![](img/setup-1.jpg)
+<br>
+<br>
+
+**Healthy** participants: ≥ 2,700 g & ≥ 8 Apgar-10 & ≥37 weeks post-mentrual age
+
+Tested **6-72 hours after delivery**
+
+**Cot-side testing** inside hospital room (Àrea de la Dona)
+
+## fNIRS at the Hospital Sant Joan de Déu
+
+### Setup
+
+![](img/setup.png)
+
+## fNIRS at the Hospital Sant Joan de Déu
+
+### Setup
+
+<br>
+<br>
+
+::: {.columns}
+::: {.column width="57%"}
 ![](img/setup-2.jpg)
+:::
+
+::: {.column width="43%"}
 ![](img/setup-3.jpg)
+:::
+:::
 
 ## fNIRS at the Hospital Sant Joan de Déu
 
-{{< video img/setup.mp4 >}}
+### Setup
+
+{{< video img/setup.mp4 >}}{fig-align="center"}
+
+## fNIRS at the Hospital Sant Joan de Déu
+
+### Montage/optode layout
+
+::: {.columns .center}
+:::: {.column width="35%"}
+![](img/montage-frontal.png){fig-align="center"}
+::::
+:::: {.column}
+::::: {.columns}
+:::::: {.column}
+![](img/montage-left.png){fig-align="center"}
+::::::
+:::::: {.column}
+![](img/montage-right.png){fig-align="center"}
+::::::
+:::::
+::::
+:::
+
+## fNIRS at the Hospital Sant Joan de Déu
+
+### Montage/optode layout
+
+::: {.columns .center}
+:::: {.column width="35%"}
+![](img/sensitivity-front.png){fig-align="center"}
+::::
+:::: {.column}
+::::: {.columns}
+:::::: {.column}
+![](img/sensitivity-left.png){fig-align="center"}
+::::::
+:::::: {.column}
+![](img/sensitivity-right.png){fig-align="center"}
+::::::
+:::::
+::::
+:::
+
+## Challenges in neonatal fNIRS
+
+<br>
+<br>
+
+* True **shape of the HRF is relatively unknown** and variable within/between partiicpants and studies [@cristia2013online; @lloyd2010illuminating]
 
 ## fNIRS in neonates
-
-**Canonical Haemodynamic Response Function (HRF)
-** 
-
-* True shape of the HRF is relatively unknown
-* Variability within-between participants
-* Variability between studies [@cristia20213; @lloyd2010]
-
-Candidate explanation: ongoing maturation of the neurovascular coupling barrier [@issard2018variability; @arichi2012development]
-
-## fNIRS in neonates
-
-@issard2018variability:
 
 ::: {.columns}
 :::: {.column}
 **Canonical response**
 
-![](img/issard2018.jpg)
+![@issard2018variability](img/issard2018.jpg){fig-align="center"}
 ::::
 :::: {.column}
 ::::
@@ -226,116 +262,108 @@ Candidate explanation: ongoing maturation of the neurovascular coupling barrier 
 
 ## fNIRS in neonates
 
-[@issard2018variability]
 
 ::: {.columns}
 :::: {.column}
 **Canonical response**
 
-![](img/issard2018.jpg)
+![](img/issard2018.jpg){fig-align="center"}
 ::::
 :::: {.column}
 **Inverted response**
 
-![](img/issard2018inverted.jpg)
+![@issard2018variability](img/issard2018inverted.jpg){fig-align="center"}
 ::::
 :::
 
-## Other pitfalls in neonatal fNIRS research
+## Challenges in neonatal fNIRS
 
+<br>
+<br>
+
+* True **shape of the HRF is relatively unknown** and variable within/betweem partiicpants and studies [@cristia2013online; @lloyd2010illuminating]
+    + Ongoing maturation of the neurovascular coupling barrier? [@issard2018variability; @arichi2012development]
+
+::: incremental
 * **Movement**, event during deep sleep
 * **Wakefulness state**: ~40 min. sleep cycles
 * **Head morphology**: spatial registration is challenging
 * **Environment**: hospital ward
-
-## Task design
-
-## Montage
-
-### devFOLD
-
-### NIRSite
-
-## Montage
-
-### What about short channels?
-
-### What about spatial corregistration?
-
-## Data collection
-
-## Data organisation: BIDS format
-
-[bids.neuroimaging.io](https://bids.neuroimaging.io)
-
-- Proposed **standard** for **neuroimaging** datasets (EEG, fNIRS, MRI, etc.)
-- Adopted and encouraged by the **Society for fNIRS** ([SFNIRS](https://fnirs.org/))
-- Increases **reproducibility**, transparency, and documentation
-- Ready to share in **BIDS-compliant** repositories (e.g., [OpenNeuro](https://openneuro.org/).)
-
-## Data organisation: BIDS format
-
-Luke, R., Oostenveld, R., Cockx, H., Niso, G., Shader, M. J., Orihuela-Espina, F., ... & Pollonini, L. (2025). NIRS-BIDS: brain imaging data structure extended to near-infrared spectroscopy. Scientific Data, 12(1), 159.
-
-![](img/luke.png)
-
-
-## Designing a preprocessing pipeline
-
-**The FRESH initiative**
-
-Yücel, M. A., Luke, R., Mesquita, R. C., von Lühmann, A., Mehler, D. M., Lührs, M., ... & Zemanek, V. (2025). **fNIRS reproducibility varies with data quality, analysis pipelines, and researcher experience**. *Communications biology*, 8(1), 1149.
-
-## Designing a preprocessing pipeline
-
-**The FRESH initiative**
-
->Asked 38 research teams worldwide to independently analyze the same two fNIRS datasets.
-
->Using different pipelines, **nearly 80% of teams agreed on group-level results**
-
->Teams with higher self-reported analysis confidence, which correlated with years of fNIRS experience, showed greater agreement
-
->**main sources of variability were related to how poor-quality data were handled**
-
-## Designing a preprocessing pipeline
-
-![](img/fresh-2.png)
-
-## Designing a preprocessing pipeline
-
-![](img/fresh.png)
-
-## Designing a preprocessing pipeline
-
-Gemignani, J., & Gervain, J. (2021). **Comparing different pre-processing routines for infant fNIRS data**. *Developmental Cognitive Neuroscience*, 48, 100943.
-
-## Designing a preprocessing pipeline
-
-::: incremental
-* Data **quality/inclusion trade-off**
-* Performance of all pipelines deteriorated with increasing levels of **noise**
-* Automatic correction of motion artifacts should be used cautiously, could result in false negatives, reduced effect sizes and an underestimation of the hemodynamic response
-* Applying pre-processing to optical densities or concentration changes achieved overall very similar results
 :::
 
 ## Designing a preprocessing pipeline
 
-![](img/gemignani-2.jpg)
+### The FRESH initiative
+
+<br>
+<br>
+
+::: box
+Yücel, M. A., Luke, R., Mesquita, R. C., von Lühmann, A., Mehler, D. M., Lührs, M., ... & Zemanek, V. (2025). **fNIRS reproducibility varies with data quality, analysis pipelines, and researcher experience**. *Communications biology*, 8(1), 1149.
+:::
+
+## Designing a preprocessing pipeline
+
+### The FRESH initiative
+
+<br>
+<br>
+
+* Asked **38 research teams** worldwide to independently analyze the same two fNIRS datasets.
+* Using different pipelines, **nearly 80% of teams agreed on group-level results**
+* Teams with higher self-reported analysis confidence, which correlated with years of fNIRS experience, showed greater agreement
+* Main sources of variability were related to how poor-quality data were handled
+
+## Designing a preprocessing pipeline
+
+### The FRESH initiative
+
+![](img/fresh-2.png){fig-align="center"}
+
+## Designing a preprocessing pipeline
+
+### The FRESH initiative
+
+![](img/fresh.png){fig-align="center"}
+
+## Designing a preprocessing pipeline
+
+<br>
+<br>
+
+::: box
+Gemignani, J., & Gervain, J. (2021). **Comparing different pre-processing routines for infant fNIRS data**. *Developmental Cognitive Neuroscience*, 48, 100943.
+:::
+
+## Designing a preprocessing pipeline
+
+<br>
+<br>
+
+* Data **quality/inclusion trade-off**
+
+::: incremental
+* Performance of all pipelines deteriorated with increasing levels of **noise**
+* Use automatic motion artifact correction with **caution**: false negatives, reduced effect sizes, underestimation of the HRF
+* The **ordering** of some preprocessing steps does not impact conclusions overall
+:::
+
+## Designing a preprocessing pipeline
+
+<br>
+<br>
+
+![](img/gemignani-2.jpg){fig-align="center"}
 
 
 ## Pipeline suggestion
 
-1) **Transform to optical density**
-2) **Signal quality assessment** 
-3) Channel pruning
-4) Motion arctifact correction
-5) **Transform to ΔHbO and ΔHbR concentrations**
-6) Frequency filtering (physiological arctifact attenuation)
-7) Epoching and averaring
-9) Group-level data analysis
+![](img/pipeline.png)
 
 ## Software
+
+<br>
+<br>
 
 - Homer2/[Homer3](https://openfnirs.org/software/homer/) [@huppert2009homer]
 - [MNE-Python](https://mne.tools/stable/index.html) [@gramfort2013meg], [MNE-NIRS](https://mne.tools/mne-nirs/stable/index.html) [@luke2021analysis]
@@ -346,16 +374,43 @@ Gemignani, J., & Gervain, J. (2021). **Comparing different pre-processing routin
 - [Fieldtrip](https://www.fieldtriptoolbox.org/)
 - [Cedalion](http://cedalion.tools/) [@middell2026cedalion]
 
-# Participant case study
+## Software
 
-The good, the bad and the ugly
+[Cedalion](http://cedalion.tools/) [@middell2026cedalion]
+
+![](img/cedalion.png)
+
+# Participant case study
 
 ## Datasets
 
-* **Neonates**: García-Castro G., Sofocleous C., Gervain, J., Alarcón AllenA., and Santolin C. (in prep)
-* **Adults**: Hernández-Sauret, A., García-Castro, G., & Redolar-Ripoll, E. (2026). *Brain Topography*, 39(1), 2.
+<br>
+<br>
+
+::: {.columns}
+::: {.column}
+### Neonates
+
+García-Castro G., Sofocleous C., Gervain, J., Alarcón Allen A., and Santolin C. (in prep)
+:::
+::: {.column}
+### Adults
+
+Hernández-Sauret, A., García-Castro, G., & Redolar-Ripoll, E. (2026). *Brain Topography*, 39(1), 2. [https://link.springer.com/article/10.1007/s10548-025-01157-4](https://link.springer.com/article/10.1007/s10548-025-01157-4)
+:::
+:::
+
+## Datasets
+
+![](img/eastwood.jpg){fig-align="center"}
 
 ## The good: adult data
+
+<br>
+
+Importing raw light intensity from `.snirf` file:
+
+<br>
 
 ```python
 from pathlib import Path
@@ -375,6 +430,8 @@ print(rec)
 
 ## The good: adult data
  
+<br>
+
 ::: columns
 :::: {.column width="75%"}
 Plotting raw light intensity data with [matplotlib](https://matplotlib.org/):
@@ -399,87 +456,77 @@ for wl_i, wl in enumerate(amp.wavelength.values):
 
 ## The good: adult data
 
-![](img/good-amp-1.png)
+![](img/good-amp-1.png){fig-align="center"}
 
 ## The good: adult data
 
-![](img/good-amp-2.png)
+![](img/good-amp-2.png){fig-align="center"}
 
 ## The good: adult data
 
-![](img/good-amp-3.png)
-
-## The good: adult data
-
-![](img/good-amp-4.png)
+![](img/good-amp-3.png){fig-align="center"}
 
 ## The bad: breastfeeding neonate
 
-![](img/bad-amp-1.png)
+![](img/bad-amp-1.png){fig-align="center"}
 
 ## The bad: breastfeeding neonate
 
-![](img/bad-amp-2.png)
-
-## The bad: breastfeeding neonate
-
-![](img/bad-amp-3.png)
+![](img/bad-amp-2.png){fig-align="center"}
 
 
 ## The bad: breastfeeding neonate
 
-![](img/bad-amp-4.png)
+![](img/bad-amp-3.png){fig-align="center"}
 
 ## The ugly: sleeping neonate
 
-![](img/ugly-amp-1.png)
-
-
-## The ugly: sleeping neonate
-
-![](img/ugly-amp-2.png)
+![](img/ugly-amp-1.png){fig-align="center"}
 
 
 ## The ugly: sleeping neonate
 
-![](img/ugly-amp-3.png)
+![](img/ugly-amp-2.png){fig-align="center"}
 
 
 ## The ugly: sleeping neonate
 
-![](img/ugly-amp-4.png)
+![](img/ugly-amp-3.png){fig-align="center"}
 
+## Signal quality
 
-## Signal quality: before data collection
+<br>
+<br>
+
+::: {.columns}
+::: {.column}
+### Before data collection
 
 Calibration metrics:
 
 * Coefficient of variation (CV)
 * Signal-to-noise ratio (SNR)
 * Dark light
-
-## Signal quality: after data collection
+:::
+::: {.column}
+### After data collection
 
 * Signal-to-noise ratio (SNR)
-* Scalp coupling index (SCI)
-* Peak spectral power (PSP)
+* **Scalp coupling index (SCI)**
+* **Peak spectral power (PSP)**
 
 Can be used before data collection too! [@pollonini2016phoebe]
+:::
+:::
 
 ## Signal quality: after data collection
 
-**Signal-to-noise ratio (SNR)**: Ratio of the average over variability of the signal.
-
-$$
-\text{SNR} = \frac{\bar{X}_{\lambda_i}}{\sigma_{X_{\lambda_i}}}
-$$
-
-
-## Signal quality: after data collection
+<br>
+<br>
 
 **Scalp coupling index (SCI)**: Index of optode coupling with scalp based on cardiac pulse [@pollonini2014auditory]
 
-1) Band-pass filter the signal in the heartbeat frequency of interest^[0.5-2.5 Hz in healthy adults, 1.17-3.17 Hz in neonates]
+1) Band-pass filter the signal in the heartbeat frequency of interest
 2) Normalize time series and segment into rolling windows (e.g., 5 seconds)
 3) For each window: Zero-lag cross-correlation between time series in both wavelengths
 4) Compare against threshold
@@ -491,7 +538,13 @@ $$
 
 ## Signal quality: after data collection
 
+<br>
+<br>
+
 **Scalp coupling index (SCI)**: Index of optode coupling with scalp based on cardiac pulse [@pollonini2014auditory]
+
+<br>
+<br>
 
 ```python
 from cedalion.nirs import cw
@@ -504,15 +557,24 @@ sci, sci_mask = quality.sci(od, window_length, 0.8)
 
 ## Signal quality: after data collection
 
-![](img/sci-1.png)
+![](img/sci-1.png){fig-align="center"}
 
 ## Signal quality: after data collection
 
+<br>
+<br>
+
 **Scalp coupling index (SCI)**: Index of optode coupling with scalp based on cardiac pulse [@pollonini2014auditory]
+
+<br>
+<br>
 
 *Limitation*: Motion arctifacts can inflate SCI (synchronised, high-amplitude perturbations in both signals)
 
 ## Signal quality: after data collection
+
+<br>
+<br>
 
 **Peak spectral power (PSP)**: peak power of cross-correlation between both wavelengths in the hearbeat frequency range.
 
@@ -520,17 +582,20 @@ sci, sci_mask = quality.sci(od, window_length, 0.8)
 2) Get peak power across lags
 3) Compare against threshold
 
-Recommended in combination to SCI [@pollonini2016phoebe]
+<br>
+
+Recommended in combination with SCI [@pollonini2016phoebe]
 
 ## Signal quality: after data collection
 
-**Peak spectral power (PSP)**: peak power of cross-correlation between both wavelengths in the hearbeat frequency range.
-
-![](img/psp-1.png)
+![](img/psp-1.png){fig-align="center"}
 
 ## Signal quality: choosing thresholds
 
-Sample size vs. data quality trade-off.
+<br>
+<br>
+
+**Sample size vs. data quality trade-off.**
 
 Recommendations:
 
@@ -539,19 +604,16 @@ Recommendations:
 
 ## Signal quality: choosing thresholds
 
-![](img/all-mask-1.png)
-
-## Signal quality: choosing thresholds
-
-![](img/prop-mask-1.png)
+![](img/all-mask-1.png){fig-align="center"}
 
 ## Signal quality: channel pruning
 
-![](img/prop-mask-1.png)
-
-## Signal quality: channel pruning
+<br>
+<br>
 
 Channels with less than some threshold proportion of above-threshold windows are excluded from further analyses (e.g., 0.7).
+
+<br>
 
 ```python
 quality_mask = [time_clean >= 0.7]
@@ -559,13 +621,26 @@ rec["od"], exc_ch = quality.prune_ch(rec["od"], quality_mask, "all")
 od_pruned, drop_list = quality.prune_ch(rec["od"], masks, "all")
 ```
 
-Interpolation? Work in progress.
+<br>
+
+Channel interpolation? Work in progress.
 
 ## Signal quality: channel pruning
 
-![](img/pruned-1.png)
+![](img/all-mask-1.png){fig-align="center"}
 
-## Motion arctifact identification
+## Signal quality: channel pruning
+
+![](img/prop-mask-1.png){fig-align="center"}
+
+## Signal quality: channel pruning
+
+![](img/pruned-1.png){fig-align="center"}
+
+## Motion arctifact attenuation
+
+<br>
+<br>
 
 Motion arctifacts (MA) are caused my changes optode position due to movement (cap slides around or separates from scalp).
 
@@ -577,20 +652,38 @@ Motion arctifacts (MA) are caused my changes optode position due to movement (ca
 
 ## Motion arctifact attenuation
 
-* External signal:
-    + Short channel separation
-    + Accelerometer [@cui2015sensitivity]
-* Correction methods
-    + **Wavelet filtering** [@molavi2012waveletbased]
-    + **Temporal deivative distribution repair (TDDR)** [@fishburn2019temporal]
-    + Savitzky-Golay spline interpolation [@jahani2018motion]
-    + Principal component analysis (PCA)
+<br>
+<br>
+
+::: {.columns}
+::: {.column}
+### External signals
+
+* Short channel regression*
+    + But see @emberson2016isolating
+* Accelerometer [@cui2015sensitivity]
+
+:::
+::: {.column}
+### Signal correction methods
+
+* **Wavelet filtering** [@molavi2012waveletbased]
+* **Temporal deivative distribution repair (TDDR)** [@fishburn2019temporal]
+* Savitzky-Golay spline interpolation [@jahani2018motion]
+* Principal component analysis (PCA)
+
+:::
+:::
+
 
 ## Motion arctifact attenuation
 
+<br>
+<br>
+
 Current recommendation for pediatric data: combination of **wavelet filtering** and **spline interpolation** [@dilorenzo2019recommendations].
 
-For neonatal populations, we found TDDR + wavelet performed best.
+We found **TDDR + wavelet** performed best in neonatal datasets (in-lab annecdotical data).
 
 <br>
 <br>
@@ -603,13 +696,16 @@ od = motion_correct.tddr(motion_correct.wavelet(od))
 
 ## Motion arctifact attenuation
 
-![](img/tddr-1.png)
+![](img/tddr-1.png){fig-align="center"}
 
 ## Motion arctifact attenuation
 
-![](img/tddr-2.png)
+![](img/tddr-2.png){fig-align="center"}
 
 ## Concentration of HbO and HbR
+
+<br>
+<br>
 
 ```python
 dpf_vals = [4.2, 5.3]
@@ -618,58 +714,72 @@ dpf = xr.DataArray(dpf_vals, dims="wavelength", coords=dpf_coords)
 rec["conc"] = cw.od2conc(rec["od"], rec.geo3d, dpf)
 ```
 
-## Concentration of HbO and HbR
+<br>
 
-![](img/conc-1.png)
+::: box
+**Differential pathlength factor** ($\overline{DPF}$)
 
-
-## Concentration of HbO and HbR
-
-![](img/conc-2.png)
-
+Constant in the mBLL equation. Depends on the characteristics of the underlying biological tissue; choose age appropriate values.
+:::
 
 ## Concentration of HbO and HbR
 
-![](img/conc-3.png)
+![](img/conc-1.png){fig-align="center"}
+
+
+## Concentration of HbO and HbR
+
+![](img/conc-2.png){fig-align="center"}
+
+## Concentration of HbO and HbR
+
+![](img/conc-3.png){fig-align="center"}
 
 ## Physiological arctifact attenuation: frequency filtering
 
-![](img/physio.jpg)
+![](img/physio.jpg){fig-align="center"}
 
 ## Physiological arctifact attenuation: frequency filtering
+
+<br>
+<br>
 
 |  | Heartbeat | Respiration | Mayer waves | Very low frequency waves |
 |------------|-----------|-------------|-------------|--------------------|
 | Adults | 1 Hz | 0.3 Hz | 0.1 Hz | < 0.04 Hz |
 | Infants | 1.17-3.17 Hz | 0.5-1 Hz | Unknown | Unknown |
 
-
-## Physiological arctifact attenuation: frequency filtering
+<br>
+<br>
 
 ```python
 fmin, fmax = 0.02, 0.5
-rec["conc"] = rec["conc"].cd.freq_filter(fmin=fmin * units.Hz, fmax=fmax * units.Hz)
+rec["conc"] = rec["conc"].cd.freq_filter(
+    fmin=fmin * units.Hz,
+    fmax=fmax * units.Hz,
+)
 ```
 
-## Physiological arctifact attenuation: frequency filtering
-
-![](img/csd-1.png)
 
 ## Physiological arctifact attenuation: frequency filtering
 
-![](img/csd-2.png)
+![](img/csd-1.png){fig-align="center"}
 
 ## Physiological arctifact attenuation: frequency filtering
 
-![](img/csd-3.png)
+![](img/csd-2.png){fig-align="center"}
 
 ## Physiological arctifact attenuation: frequency filtering
 
-![](img/csd-4.png)
+![](img/csd-3.png){fig-align="center"}
 
 ## Physiological arctifact attenuation: frequency filtering
 
-![](img/csd-5.png)
+![](img/csd-4.png){fig-align="center"}
+
+## Physiological arctifact attenuation: frequency filtering
+
+![](img/csd-5.png){fig-align="center"}
 
 ## Epoching and averaging
 
@@ -680,11 +790,11 @@ print(rec.stim)
 
 ## Epoching and averaging
 
-![](img/epochs-1.png)
+![](img/epochs-1.png){fig-align="center"}
 
 ## Epoching and averaging
 
-![](img/epochs-2.png)
+![](img/epochs-2.png){fig-align="center"}
 
 ## Epoching and averaging
 
@@ -708,7 +818,7 @@ hrf = epochs.groupby("trial_type").mean("epoch")
 ```
 ## Epoching and averaging
 
-![](img/epochs-3.png)
+![](img/epochs-3.png){fig-align="center"}
 
 ## Skin and hair type
 
@@ -717,6 +827,37 @@ hrf = epochs.groupby("trial_type").mean("epoch")
 * Fitzpatrick Skin Phototype Scale (I, II, III, IV)
 * Fischer-Saller Scale, Andre Walker Hair Typing System, and the FIA Hair Typing System
 
+## Functional [Near-Infrared Spectroscopy]{.lightgrey}
+
+If we shine near-infrared light into biological tissue, we can estimate **changes in relative concentration** of [HbO]{.red} and [HbR]{.blue} time (**functional**).
+
+::: {.box .center}
+**modified Beer-Lambert Law (mBLL)**
+:::
+
+$$
+\begin{aligned}
+\Delta A(\lambda_1 = 760~nm) &= \text{DPF} \cdot r \cdot [  \epsilon_{HbO}(\lambda_1) \Delta c_{HbO} + \epsilon_{HbO}(\lambda_1) \Delta c_{HbO} ]  
+\\
+\Delta A(\lambda_2 = 850~nm) &= \text{DPF} \cdot r \cdot [  \epsilon_{HbO}(\lambda_2) \Delta c_{HbR} + \epsilon_{HbR}(\lambda_2) \Delta c_{HbR} ]
+\end{aligned}
+$$
+
+
+## Data organisation: BIDS format
+
+[bids.neuroimaging.io](https://bids.neuroimaging.io)
+
+- Proposed **standard** for **neuroimaging** datasets (EEG, fNIRS, MRI, etc.)
+- Adopted and encouraged by the **Society for fNIRS** ([SFNIRS](https://fnirs.org/))
+- Increases **reproducibility**, transparency, and documentation
+- Ready to share in **BIDS-compliant** repositories (e.g., [OpenNeuro](https://openneuro.org/).)
+
+## Data organisation: BIDS format
+
+Luke, R., Oostenveld, R., Cockx, H., Niso, G., Shader, M. J., Orihuela-Espina, F., ... & Pollonini, L. (2025). NIRS-BIDS: brain imaging data structure extended to near-infrared spectroscopy. Scientific Data, 12(1), 159.
+
+![](img/luke.png){fig-align="center"}
 
 ## References
 
