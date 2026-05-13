@@ -1,0 +1,197 @@
+/* -- scss:import --*/
+
+@import 'https://fonts.googleapis.com/css?family=Outfit';
+@import 'https://fonts.googleapis.com/css?family=Google+Sans';
+@import 'https://fonts.googleapis.com/css?family=Fira+Code';
+
+/*-- scss:rules --*/
+$font-family-sans-serif: "Outfit";
+$font-family-mono: "Fira Code";
+
+$font-size-title-large: 35px;
+$font-size-title-medium: 25px;
+$font-size-title-small: 20px;
+
+$link-color: darkblue;
+$grey: lightgrey;
+
+#title-slide {
+
+  .title,
+  .subtitle {
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-title-large;
+    margin-top: 0px;
+    margin-bottom: 3%;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    font-weight: 500;
+    font-size: $font-size-title-medium !important;
+    margin-bottom: 8%;
+  }
+
+  .quarto-title-author-name {
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-title-medium;
+    margin-bottom: 2%;
+  }
+
+  .quarto-title-author-email,
+  .date {
+    font-family: $font-family-mono;
+    font-size: $font-size-title-small !important;
+  }
+
+  .quarto-title-affiliation {
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-title-small !important;
+    color: black;
+    margin-top: 5%;
+  }
+}
+
+.lightgrey {
+  color: $grey;
+}
+
+.center {
+  text-align: center;
+}
+
+.citation {
+  line-height: 25%;
+  color: $link-color;
+  text-align: right;
+
+  a {
+    text-align: right;
+  }
+}
+
+.aside {
+  color: $grey;
+  font-size: 15px;
+  text-align: right;
+}
+
+.callout {
+  background-color: $grey;
+}
+
+b,
+strong {
+  font-weight: 900;
+}
+
+.reveal .slide {
+
+  blockquote {
+    border-left: 3px solid;
+    padding-left: 0.5em;
+  }
+
+  a {
+    color: $link-color
+  }
+
+  b,
+  strong {
+    font-weight: 900;
+  }
+
+  caption {
+    font-size: 20px;
+    line-height: 25%;
+    color: $grey;
+    text-align: right;
+
+    p {
+      line-height: 25%;
+      color: $grey;
+      text-align: right;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 35px;
+    font-weight: bolder;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 5%;
+    font-weight: bolder;
+  }
+
+  figcaption {
+    margin-top: -3%;
+    text-align: right;
+    margin-right: 5%;
+    color: $grey;
+  }
+}
+
+
+h2 {
+  font-size: 45px !important;
+}
+
+h3 {
+  font-size: 40px !important;
+}
+
+p,
+li,
+ul,
+th,
+td {
+  font-size: 30px !important;
+  font-weight: normal;
+}
+
+aside,
+.citation {
+  font-size: 30px !important;
+}
+
+
+aside p,
+.aside-footnotes {
+  color: black;
+}
+
+.blockquote {
+  font-size: 21px;
+  color: black;
+}
+
+.reveal .slide .box {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  background: $grey;
+}
+
+.highlight {
+  background-color: black;
+  color: black;
+  font-size: 55px;
+  opacity: 1;
+}

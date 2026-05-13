@@ -2,31 +2,29 @@
 # | label: setup
 from pathlib import Path
 
+from cedalion.dataclasses import Recording
+from cedalion import io
 from matplotlib import pyplot as plt
 from matplotlib import colors
 import numpy as np
 import pandas as pd
-
-from cedalion.dataclasses import Recording
+from scipy import signal
 
 from src import nirs
 
 plt.rcParams["figure.autolayout"] = True
 
-MOP_STIM_MAPPING = {
-    "A": [6, 7, 8, 9, 18, 19, 20, 21],
-    "B": [10, 11, 12, 13, 22, 23, 24, 25],
-    "C": [14, 15, 16, 17, 26, 27, 28, 29],
-}
+DATA_PATH: Path = Path("data")
 
-SSP_STIM_MAPPING: dict[str, list[int]] = {
+STIM_MAPPING: dict[str, list[int]] = {
     "A": [9],
     "B": [10],
-    "Exclude": [4, 6, 7],
+    "Exclude": [2, 4, 6, 7],
 }
 
-CHROMO_COLORS = {760: "tab:blue", 850: "tab:red", "HbR": "tab:blue", "HbO": "tab:red"}
-COND_COLORS = {"A": "tab:blue", "B": "tab:orange", "C": "tab:green"}
+rec = io.read_snirf(DATA_PATH / "ssp-good.snirf")[0]
+rec.stim = nirs.process_events(rec.stim, STIM_MAPPING)
+rec.stim = rec.stim[rec.stim["trial_type"] != "Exclude"]
 ```
 
 ## About us
@@ -45,11 +43,11 @@ COND_COLORS = {"A": "tab:blue", "B": "tab:orange", "C": "tab:green"}
 
 ## fNIRS
 
-*[**F**unctional **N**ear-**I**nfrared]{style="color:lightgrey;"}* ***S**pectroscopy*
+*[**F**unctional **N**ear-**I**nfrared]{.lightgrey}* ***S**pectroscopy*
 
 ## fNIRS
 
-*[**F**unctional **N**ear-**I**nfrared]{style="color:lightgrey;"}* ***S**pectroscopy*
+*[**F**unctional **N**ear-**I**nfrared]{.lightgrey}* ***S**pectroscopy*
 
 Some materials have **different optical properties** than others (e.g., they absorbe more light of some colors).
 
@@ -57,44 +55,25 @@ Some materials have **different optical properties** than others (e.g., they abs
 
 ## fNIRS
 
-*[**F**unctional **N**ear-**I**nfrared]{style="color:lightgrey;"}* ***S**pectroscopy*
+*[**F**unctional **N**ear-**I**nfrared]{.lightgrey}* ***S**pectroscopy*
 
 We can study the **composition of an object** by analysing how light behaves when passing through it (i.g., **spectroscopy**)
-
 
 ![](img/spectroscopy.png)
 
 ## fNIRS
 
-[***F**unctional*]{style="color:lightgrey;"} ***N**ear-**I**nfrared [Spectroscopy]{style="color:lightgrey;"}*
-
+[***F**unctional*]{.lightgrey} ***N**ear-**I**nfrared [Spectroscopy]{.lightgrey}*
 
 ## fNIRS
 
-[***F**unctional*]{style="color:lightgrey;"} ***N**ear-**I**nfrared [Spectroscopy]{style="color:lightgrey;"}*
+[***F**unctional*]{.lightgrey} ***N**ear-**I**nfrared [Spectroscopy]{.lightgrey}*
 
-::: columns
-:::: {.column width="30%"}
+
 **Oxy-haemoglobin** (HbO) and **deoxy-haemoglobin** (HbR) absorb **near-infrared light** differently
-::::
-:::: {.column width="70%"}
-```{python}
-df = pd.read_csv(Path("data", "absorption.tsv"), sep="\t")
-df = df[(df.wavelength >= 650) & (df.wavelength <= 900)]
 
-fig, ax = plt.subplots(1, 1)
-fig.set_size_inches(7, 4)
-ax.plot(df.wavelength, df.hbo, c="tab:red", label="HbO", lw=2)
-ax.plot(df.wavelength, df.hbr, c="tab:blue", label="HbR", lw=2)
-ax.axvspan(690, 760, lw=0, color="tab:blue", alpha=1 / 4)
-ax.axvspan(830, 900, lw=0, color="tab:red", alpha=1 / 4)
-ax.set_ylabel("Molar Extinction Coefficient ($cm^{-1}/M$)")
-ax.set_xlabel("Wavelenth [$\\lambda$] (nm)")
-fig.legend(ncol=2)
-```
+![NIR light absorption by Hb](img/hb-absorption.png)
 
-::::
-:::
 
 ## fNIRS
 
@@ -195,7 +174,7 @@ We are measuring the **BOLD** signal, which takes around 15 seconds to go back t
 
 ## Limitations
 
-* Limited access to sub-cortical regions (~3 cm)*
+* Limited access to sub-cortical regions (~3 cm)^[But see Diffuse Ooptical Tomography (DOT) [@culver2001optimization]]
 * Temporal resolution constrained by haemodynamics
 * Limited spatial resolution
 
@@ -233,7 +212,7 @@ Candidate explanation: ongoing maturation of the neurovascular coupling barrier 
 
 ## fNIRS in neonates
 
-[@issard2018variability]
+@issard2018variability:
 
 ::: {.columns}
 :::: {.column}
@@ -371,14 +350,14 @@ Gemignani, J., & Gervain, J. (2021). **Comparing different pre-processing routin
 
 The good, the bad and the ugly
 
+## Datasets
 
 * **Neonates**: García-Castro G., Sofocleous C., Gervain, J., Alarcón AllenA., and Santolin C. (in prep)
-* **Adults**: Hernández-Sauret, A., Garcia-Castro, G., & Redolar-Ripoll, E. (2026). *Brain Topography*, 39(1), 2.
+* **Adults**: Hernández-Sauret, A., García-Castro, G., & Redolar-Ripoll, E. (2026). *Brain Topography*, 39(1), 2.
 
 ## The good: adult data
 
-```{python}
-#| echo: true
+```python
 from pathlib import Path
 from cedalion import io
 
@@ -420,202 +399,56 @@ for wl_i, wl in enumerate(amp.wavelength.values):
 
 ## The good: adult data
 
-```{python}
-from matplotlib import pyplot as plt
-
-amp = rec["amp"]
-
-fig, axes = plt.subplots(2, 1)
-
-for wl_i, wl in enumerate(amp.wavelength.values):
-    for ch in amp.channel.values:
-        d = amp.sel(wavelength=wl, channel=ch)
-        axes[wl_i].plot(d.time, d, c="k", alpha=0.5)
-```
+![](img/good-amp-1.png)
 
 ## The good: adult data
 
-```{python}
-from matplotlib import pyplot as plt
-
-amp = rec["amp"]
-
-fig, axes = plt.subplots(2, 1, sharey=True)
-
-colors = {760: "tab:blue", 850: "tab:red"}
-for wl_i, wl in enumerate(amp.wavelength.values):
-    ax = axes[wl_i]
-
-    for ch in amp.channel.values:
-        d = amp.sel(wavelength=wl, channel=ch)
-        ax.plot(d.time, d, c=colors[wl], lw=1, alpha=0.5)
-        ax.set_ylabel(f"{wl} nm")
-
-        if wl_i == 0:
-            ax.set_xticks([])
-_ = fig.supylabel("Amplitude (V)")
-_ = fig.supxlabel("Time (s)")
-```
+![](img/good-amp-2.png)
 
 ## The good: adult data
 
-```{python}
-channels = amp.channel.values[:1]
-fig, ax = plt.subplots(len(channels), 1)
-
-colors = {760: "tab:blue", 850: "tab:red"}
-
-ax.set_title(ch)
-
-for wl_i, wl in enumerate(amp.wavelength.values):
-    d = amp.sel(wavelength=wl, channel=ch)
-    ax.plot(d.time, d, c=colors[wl], lw=1, label=f"{wl:.0f} nm")
-
-_ = fig.supylabel("Amplitude (V)")
-_ = fig.supxlabel("Time (s)")
-fig.legend(ncols=2)
-```
+![](img/good-amp-3.png)
 
 ## The good: adult data
 
-```{python}
-channels = amp.channel.values[:3]
-times = (100, 130)
-
-fig, axes = plt.subplots(len(channels), 1)
-
-colors = {760: "tab:blue", 850: "tab:red"}
-
-for ch_i, ch in enumerate(channels):
-    ax = axes[ch_i]
-    ax.set_title(ch)
-    if ch_i != (len(channels) - 1):
-        ax.set_xticks([])
-
-    for wl_i, wl in enumerate(amp.wavelength.values):
-        d = amp.sel(wavelength=wl, channel=ch, time=slice(*times))
-        label = f"{wl:.0f} nm" if ch_i == 0 else None
-        ax.plot(d.time, d, c=colors[wl], lw=1, label=label)
-
-_ = fig.supylabel("Amplitude (V)")
-_ = fig.supxlabel("Time (s)")
-fig.legend(ncols=2)
-```
+![](img/good-amp-4.png)
 
 ## The bad: breastfeeding neonate
 
-```{python}
-file = Path("data/mop-breastfeeding.snirf")
-rec = io.read_snirf(file)[0]
-
-amp = rec["amp"]
-
-fig, axes = plt.subplots(2, 1, sharey=True)
-
-colors = {760: "tab:blue", 850: "tab:red"}
-for wl_i, wl in enumerate(amp.wavelength.values):
-    ax = axes[wl_i]
-
-    for ch in amp.channel.values:
-        d = amp.sel(wavelength=wl, channel=ch)
-        ax.plot(d.time, d, c=colors[wl], lw=1, alpha=0.5)
-        ax.set_ylabel(f"{wl} nm")
-
-        if wl_i == 0:
-            ax.set_xticks([])
-_ = fig.supylabel("Amplitude (V)")
-_ = fig.supxlabel("Time (s)")
-```
+![](img/bad-amp-1.png)
 
 ## The bad: breastfeeding neonate
 
-```{python}
-channels = amp.channel.values[:3]
-fig, axes = plt.subplots(len(channels), 1)
-
-colors = {760: "tab:blue", 850: "tab:red"}
-
-for ch_i, ch in enumerate(channels):
-    ax = axes[ch_i]
-    ax.set_title(ch)
-    if ch_i != (len(channels) - 1):
-        ax.set_xticks([])
-
-    for wl_i, wl in enumerate(amp.wavelength.values):
-        d = amp.sel(wavelength=wl, channel=ch)
-        label = f"{wl:.0f} nm" if ch_i == 0 else None
-        ax.plot(d.time, d, c=colors[wl], lw=1, label=label)
-
-_ = fig.supylabel("Amplitude (V)")
-_ = fig.supxlabel("Time (s)")
-fig.legend(ncols=2)
-```
+![](img/bad-amp-2.png)
 
 ## The bad: breastfeeding neonate
 
-```{python}
-ch = "S1D1"
-fig, ax = plt.subplots(2, 1)
-for wl_i, wl in enumerate(amp.wavelength.values):
-    d = amp.sel(wavelength=wl, channel=ch)
-    ax[wl_i].plot(d.time, d, c=colors[wl], lw=1)
-```
+![](img/bad-amp-3.png)
+
 
 ## The bad: breastfeeding neonate
 
-```{python}
-ch = "S1D1"
-fig, ax = plt.subplots(1, 1)
-for wl_i, wl in enumerate(amp.wavelength.values):
-    d = amp.sel(wavelength=wl, channel=ch, time=slice(100, 160))
-    ax.plot(d.time, d, c=colors[wl], lw=1)
-```
+![](img/bad-amp-4.png)
 
 ## The ugly: sleeping neonate
 
-```{python}
-file = Path("data/ssp-good.snirf")
-rec = io.read_snirf(file)[0]
-fig, ax = plt.subplots(2, 1)
+![](img/ugly-amp-1.png)
 
-amp = rec["amp"]
-
-colors = {760: "tab:blue", 850: "tab:red"}
-for wl_i, wl in enumerate(amp.wavelength.values):
-    for ch in amp.channel.values:
-        d = amp.sel(wavelength=wl, channel=ch)
-        ax[wl_i].plot(d.time, d, c=colors[wl], lw=1 / 2, alpha=0.5)
-```
 
 ## The ugly: sleeping neonate
 
-```{python}
-fig, ax = plt.subplots(2, 1)
-for wl_i, wl in enumerate(amp.wavelength.values):
-    for ch in amp.channel.values:
-        d = amp.sel(wavelength=wl, channel=ch)
-        ax[wl_i].plot(d.time, d, c=colors[wl], lw=1, alpha=0.1)
-```
+![](img/ugly-amp-2.png)
+
 
 ## The ugly: sleeping neonate
 
-```{python}
-ch = "S1D1"
-fig, ax = plt.subplots(2, 1)
-for wl_i, wl in enumerate(amp.wavelength.values):
-    d = amp.sel(wavelength=wl, channel=ch)
-    ax[wl_i].plot(d.time, d, c=colors[wl], lw=1)
-```
+![](img/ugly-amp-3.png)
+
 
 ## The ugly: sleeping neonate
 
-```{python}
-ch = "S1D1"
-fig, ax = plt.subplots(1, 1)
-for wl_i, wl in enumerate(amp.wavelength.values):
-    d = amp.sel(wavelength=wl, channel=ch, time=slice(250, 310))
-    ax.plot(d.time, d, c=colors[wl], lw=1)
-```
+![](img/ugly-amp-4.png)
+
 
 ## Signal quality: before data collection
 
@@ -650,9 +483,28 @@ $$
 2) Normalize time series and segment into rolling windows (e.g., 5 seconds)
 3) For each window: Zero-lag cross-correlation between time series in both wavelengths
 4) Compare against threshold
+
 $$
 \text{SCI} = \rho_{X_{\lambda_1}X_{\lambda_2}}(t=0) = \frac{{X_{\lambda_1}}_{t} - \bar{X}_{\lambda_1} , {X_{\lambda_2}}_{t} - \bar{X}_{\lambda_2}}{\sigma_{\lambda_1}\sigma_{\lambda_2}}
 $$
+
+
+## Signal quality: after data collection
+
+**Scalp coupling index (SCI)**: Index of optode coupling with scalp based on cardiac pulse [@pollonini2014auditory]
+
+```python
+from cedalion.nirs import cw
+from cedalion.sigproc import quality
+
+od = cw.int2od(rec["amp"])
+window_length = 5 * units.s
+sci, sci_mask = quality.sci(od, window_length, 0.8)
+```
+
+## Signal quality: after data collection
+
+![](img/sci-1.png)
 
 ## Signal quality: after data collection
 
@@ -670,6 +522,12 @@ $$
 
 Recommended in combination to SCI [@pollonini2016phoebe]
 
+## Signal quality: after data collection
+
+**Peak spectral power (PSP)**: peak power of cross-correlation between both wavelengths in the hearbeat frequency range.
+
+![](img/psp-1.png)
+
 ## Signal quality: choosing thresholds
 
 Sample size vs. data quality trade-off.
@@ -679,11 +537,178 @@ Recommendations:
 * Adults: *SCI*=0.8, *PSP*=0.1 [@pollonini2016phoebe]
 * Infants: *SCI*=0.6, *PSP*=0.04-0.05 [@beaton2026investigating]
 
-## Channel pruning
+## Signal quality: choosing thresholds
+
+![](img/all-mask-1.png)
+
+## Signal quality: choosing thresholds
+
+![](img/prop-mask-1.png)
+
+## Signal quality: channel pruning
+
+![](img/prop-mask-1.png)
+
+## Signal quality: channel pruning
 
 Channels with less than some threshold proportion of above-threshold windows are excluded from further analyses (e.g., 0.7).
 
+```python
+quality_mask = [time_clean >= 0.7]
+rec["od"], exc_ch = quality.prune_ch(rec["od"], quality_mask, "all")
+od_pruned, drop_list = quality.prune_ch(rec["od"], masks, "all")
+```
+
 Interpolation? Work in progress.
+
+## Signal quality: channel pruning
+
+![](img/pruned-1.png)
+
+## Motion arctifact identification
+
+Motion arctifacts (MA) are caused my changes optode position due to movement (cap slides around or separates from scalp).
+
+@brigadoi2014motion:
+
+* **Spikes**: fast, high amplitude changes
+* **Baseline shifts**
+* **Drift**: low frequency variations
+
+## Motion arctifact attenuation
+
+* External signal:
+    + Short channel separation
+    + Accelerometer [@cui2015sensitivity]
+* Correction methods
+    + **Wavelet filtering** [@molavi2012waveletbased]
+    + **Temporal deivative distribution repair (TDDR)** [@fishburn2019temporal]
+    + Savitzky-Golay spline interpolation [@jahani2018motion]
+    + Principal component analysis (PCA)
+
+## Motion arctifact attenuation
+
+Current recommendation for pediatric data: combination of **wavelet filtering** and **spline interpolation** [@dilorenzo2019recommendations].
+
+For neonatal populations, we found TDDR + wavelet performed best.
+
+<br>
+<br>
+
+```python
+from cedalion.sigproc import motion_correct
+
+od = motion_correct.tddr(motion_correct.wavelet(od))
+```
+
+## Motion arctifact attenuation
+
+![](img/tddr-1.png)
+
+## Motion arctifact attenuation
+
+![](img/tddr-2.png)
+
+## Concentration of HbO and HbR
+
+```python
+dpf_vals = [4.2, 5.3]
+dpf_coords = {"wavelength": rec["od"].wavelength}
+dpf = xr.DataArray(dpf_vals, dims="wavelength", coords=dpf_coords)
+rec["conc"] = cw.od2conc(rec["od"], rec.geo3d, dpf)
+```
+
+## Concentration of HbO and HbR
+
+![](img/conc-1.png)
+
+
+## Concentration of HbO and HbR
+
+![](img/conc-2.png)
+
+
+## Concentration of HbO and HbR
+
+![](img/conc-3.png)
+
+## Physiological arctifact attenuation: frequency filtering
+
+![](img/physio.jpg)
+
+## Physiological arctifact attenuation: frequency filtering
+
+|  | Heartbeat | Respiration | Mayer waves | Very low frequency waves |
+|------------|-----------|-------------|-------------|--------------------|
+| Adults | 1 Hz | 0.3 Hz | 0.1 Hz | < 0.04 Hz |
+| Infants | 1.17-3.17 Hz | 0.5-1 Hz | Unknown | Unknown |
+
+
+## Physiological arctifact attenuation: frequency filtering
+
+```python
+fmin, fmax = 0.02, 0.5
+rec["conc"] = rec["conc"].cd.freq_filter(fmin=fmin * units.Hz, fmax=fmax * units.Hz)
+```
+
+## Physiological arctifact attenuation: frequency filtering
+
+![](img/csd-1.png)
+
+## Physiological arctifact attenuation: frequency filtering
+
+![](img/csd-2.png)
+
+## Physiological arctifact attenuation: frequency filtering
+
+![](img/csd-3.png)
+
+## Physiological arctifact attenuation: frequency filtering
+
+![](img/csd-4.png)
+
+## Physiological arctifact attenuation: frequency filtering
+
+![](img/csd-5.png)
+
+## Epoching and averaging
+
+```{python}
+#| echo: true
+print(rec.stim)
+```
+
+## Epoching and averaging
+
+![](img/epochs-1.png)
+
+## Epoching and averaging
+
+![](img/epochs-2.png)
+
+## Epoching and averaging
+
+```python
+epochs = rec["conc"].cd.to_epochs(
+    rec.stim,  # stimulus dataframe
+    ["FTapping/Left", "FTapping/Right"],  # select fingertapping events, discard others
+    before=5 * units.s,  # seconds before stimulus
+    after=30 * units.s,  # seconds after stimulus
+)
+# calculate baseline
+baseline = epochs.sel(reltime=(epochs.reltime < 0)).mean("reltime")
+
+# subtract baseline
+epochs =- baseline
+epochs = epochs - baseline
+epochs = nirs.detrend_epochs(epochs)
+
+# average
+hrf = epochs.groupby("trial_type").mean("epoch")
+```
+## Epoching and averaging
+
+![](img/epochs-3.png)
 
 ## Skin and hair type
 

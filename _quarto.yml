@@ -4,20 +4,34 @@ project:
 
 title: Functional Near-Infrared Spectroscopy in Neonatal Research
 subtitle: Experimental design, data analysis and real-data preprocessing with Python
+institute: Institut de Recerca Sant Joan de Déu (IRSJD)
 format:
   revealjs:
     scrollable: true
 
 authors:
   - name: Gonzalo García-Castro
-  - affiliation: Institut de Recerca Sant Joan de Déu (IRSJD)
+    url: gongcastro.github.io
+    orcid: 0000-0002-8553-4209
+    email: gonzalo.garcia@sjd.es
 
 date: 2026/05/15
+date-format: long
+email-obfuscation: javascript
+slide-number: c
+scrollable: false
+progress: false
+fig-align: center
+fig-height: 4
+center-title-slide: true
+title-slide-attributes: 
+  data-background-image: img/background.svg
 
 message: false
 warning: false
 freeze: auto
+cache: true
 
-css: style.css
+theme: styles.scss
 
 bibliography: bibliography.bib
