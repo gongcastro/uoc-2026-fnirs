@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/tabby.min.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="index_files/libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="dcterms.date" content="2026-05-15">
@@ -16,8 +16,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -117,11 +117,11 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-906beb9aeb0261ac0c8f227f2f2de10d.css">
-  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-906beb9aeb0261ac0c8f227f2f2de10d.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -570,12 +570,12 @@
 <p><br></p>
 <p>Importing raw light intensity from <code>.snirf</code> file:</p>
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
-<span id="cb1-2"><a></a><span class="im">from</span> cedalion <span class="im">import</span> io</span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a>rec <span class="op">=</span> io.read_snirf(Path(<span class="st">"data/adult.snirf"</span>))[<span class="dv">0</span>]</span>
-<span id="cb1-5"><a></a></span>
-<span id="cb1-6"><a></a><span class="bu">print</span>(rec)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb1-2"><a href=""></a><span class="im">from</span> cedalion <span class="im">import</span> io</span>
+<span id="cb1-3"><a href=""></a></span>
+<span id="cb1-4"><a href=""></a>rec <span class="op">=</span> io.read_snirf(Path(<span class="st">"data/adult.snirf"</span>))[<span class="dv">0</span>]</span>
+<span id="cb1-5"><a href=""></a></span>
+<span id="cb1-6"><a href=""></a><span class="bu">print</span>(rec)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><br></p>
 <ul>
 <li><code>rec["amp"]</code>: Raw light intensity dataset</li>
@@ -593,16 +593,16 @@
 </div><div class="column" style="width:25%;">
 <p><img data-src="img/matplotlib-logo.png"></p>
 </div></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb2-2"><a></a></span>
-<span id="cb2-3"><a></a>amp <span class="op">=</span> rec[<span class="st">"amp"</span>]</span>
-<span id="cb2-4"><a></a></span>
-<span id="cb2-5"><a></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>)</span>
-<span id="cb2-6"><a></a></span>
-<span id="cb2-7"><a></a><span class="cf">for</span> wl_i, wl <span class="kw">in</span> <span class="bu">enumerate</span>(amp.wavelength.values):</span>
-<span id="cb2-8"><a></a>    <span class="cf">for</span> ch <span class="kw">in</span> amp.channel.values:</span>
-<span id="cb2-9"><a></a>        d <span class="op">=</span> amp.sel(wavelength<span class="op">=</span>wl, channel<span class="op">=</span>ch)</span>
-<span id="cb2-10"><a></a>        axes[wl_i].plot(d.time, d, c<span class="op">=</span><span class="st">"k"</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb2-2"><a href=""></a></span>
+<span id="cb2-3"><a href=""></a>amp <span class="op">=</span> rec[<span class="st">"amp"</span>]</span>
+<span id="cb2-4"><a href=""></a></span>
+<span id="cb2-5"><a href=""></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb2-6"><a href=""></a></span>
+<span id="cb2-7"><a href=""></a><span class="cf">for</span> wl_i, wl <span class="kw">in</span> <span class="bu">enumerate</span>(amp.wavelength.values):</span>
+<span id="cb2-8"><a href=""></a>    <span class="cf">for</span> ch <span class="kw">in</span> amp.channel.values:</span>
+<span id="cb2-9"><a href=""></a>        d <span class="op">=</span> amp.sel(wavelength<span class="op">=</span>wl, channel<span class="op">=</span>ch)</span>
+<span id="cb2-10"><a href=""></a>        axes[wl_i].plot(d.time, d, c<span class="op">=</span><span class="st">"k"</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="the-good-adult-data-2" class="slide level2">
 <h2>The good: adult data</h2>
@@ -685,12 +685,12 @@
 <p><br> <br></p>
 <p><strong>Scalp coupling index (SCI)</strong>: Index of optode coupling with scalp based on cardiac pulse <span class="citation" data-cites="pollonini2014auditory">(<a href="#/references" role="doc-biblioref" onclick="">Pollonini et al. 2014</a>)</span></p>
 <p><br> <br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">from</span> cedalion.nirs <span class="im">import</span> cw</span>
-<span id="cb3-2"><a></a><span class="im">from</span> cedalion.sigproc <span class="im">import</span> quality</span>
-<span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a>od <span class="op">=</span> cw.int2od(rec[<span class="st">"amp"</span>])</span>
-<span id="cb3-5"><a></a>window_length <span class="op">=</span> <span class="dv">5</span> <span class="op">*</span> units.s</span>
-<span id="cb3-6"><a></a>sci, sci_mask <span class="op">=</span> quality.sci(od, window_length, <span class="fl">0.8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">from</span> cedalion.nirs <span class="im">import</span> cw</span>
+<span id="cb3-2"><a href=""></a><span class="im">from</span> cedalion.sigproc <span class="im">import</span> quality</span>
+<span id="cb3-3"><a href=""></a></span>
+<span id="cb3-4"><a href=""></a>od <span class="op">=</span> cw.int2od(rec[<span class="st">"amp"</span>])</span>
+<span id="cb3-5"><a href=""></a>window_length <span class="op">=</span> <span class="dv">5</span> <span class="op">*</span> units.s</span>
+<span id="cb3-6"><a href=""></a>sci, sci_mask <span class="op">=</span> quality.sci(od, window_length, <span class="fl">0.8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="signal-quality-after-data-collection-2" class="slide level2">
 <h2>Signal quality: after data collection</h2>
@@ -738,9 +738,9 @@
 <p><br> <br></p>
 <p>Channels with less than some threshold proportion of above-threshold windows are excluded from further analyses (e.g., 0.7).</p>
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>quality_mask <span class="op">=</span> [time_clean <span class="op">&gt;=</span> <span class="fl">0.7</span>]</span>
-<span id="cb4-2"><a></a>rec[<span class="st">"od"</span>], exc_ch <span class="op">=</span> quality.prune_ch(rec[<span class="st">"od"</span>], quality_mask, <span class="st">"all"</span>)</span>
-<span id="cb4-3"><a></a>od_pruned, drop_list <span class="op">=</span> quality.prune_ch(rec[<span class="st">"od"</span>], masks, <span class="st">"all"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a>quality_mask <span class="op">=</span> [time_clean <span class="op">&gt;=</span> <span class="fl">0.7</span>]</span>
+<span id="cb4-2"><a href=""></a>rec[<span class="st">"od"</span>], exc_ch <span class="op">=</span> quality.prune_ch(rec[<span class="st">"od"</span>], quality_mask, <span class="st">"all"</span>)</span>
+<span id="cb4-3"><a href=""></a>od_pruned, drop_list <span class="op">=</span> quality.prune_ch(rec[<span class="st">"od"</span>], masks, <span class="st">"all"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><br></p>
 <p>Channel interpolation? Work in progress.</p>
 </section>
@@ -796,9 +796,9 @@
 <p>Current recommendation for pediatric data: combination of <strong>wavelet filtering</strong> and <strong>spline interpolation</strong> <span class="citation" data-cites="dilorenzo2019recommendations">(<a href="#/references" role="doc-biblioref" onclick="">Di Lorenzo et al. 2019</a>)</span>.</p>
 <p>We found <strong>TDDR + wavelet</strong> performed best in neonatal datasets (in-lab annecdotical data).</p>
 <p><br> <br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">from</span> cedalion.sigproc <span class="im">import</span> motion_correct</span>
-<span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a>od <span class="op">=</span> motion_correct.tddr(motion_correct.wavelet(od))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="im">from</span> cedalion.sigproc <span class="im">import</span> motion_correct</span>
+<span id="cb5-2"><a href=""></a></span>
+<span id="cb5-3"><a href=""></a>od <span class="op">=</span> motion_correct.tddr(motion_correct.wavelet(od))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="motion-arctifact-attenuation-3" class="slide level2">
 <h2>Motion arctifact attenuation</h2>
@@ -811,10 +811,10 @@
 <section id="concentration-of-hbo-and-hbr" class="slide level2">
 <h2>Concentration of HbO and HbR</h2>
 <p><br> <br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>dpf_vals <span class="op">=</span> [<span class="fl">4.2</span>, <span class="fl">5.3</span>]</span>
-<span id="cb6-2"><a></a>dpf_coords <span class="op">=</span> {<span class="st">"wavelength"</span>: rec[<span class="st">"od"</span>].wavelength}</span>
-<span id="cb6-3"><a></a>dpf <span class="op">=</span> xr.DataArray(dpf_vals, dims<span class="op">=</span><span class="st">"wavelength"</span>, coords<span class="op">=</span>dpf_coords)</span>
-<span id="cb6-4"><a></a>rec[<span class="st">"conc"</span>] <span class="op">=</span> cw.od2conc(rec[<span class="st">"od"</span>], rec.geo3d, dpf)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a>dpf_vals <span class="op">=</span> [<span class="fl">4.2</span>, <span class="fl">5.3</span>]</span>
+<span id="cb6-2"><a href=""></a>dpf_coords <span class="op">=</span> {<span class="st">"wavelength"</span>: rec[<span class="st">"od"</span>].wavelength}</span>
+<span id="cb6-3"><a href=""></a>dpf <span class="op">=</span> xr.DataArray(dpf_vals, dims<span class="op">=</span><span class="st">"wavelength"</span>, coords<span class="op">=</span>dpf_coords)</span>
+<span id="cb6-4"><a href=""></a>rec[<span class="st">"conc"</span>] <span class="op">=</span> cw.od2conc(rec[<span class="st">"od"</span>], rec.geo3d, dpf)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><br></p>
 <div class="box">
 <p><strong>Differential pathlength factor</strong> (<span class="math inline">\(\overline{DPF}\)</span>)</p>
@@ -875,11 +875,11 @@
 </tbody>
 </table>
 <p><br> <br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>fmin, fmax <span class="op">=</span> <span class="fl">0.02</span>, <span class="fl">0.5</span></span>
-<span id="cb7-2"><a></a>rec[<span class="st">"conc"</span>] <span class="op">=</span> rec[<span class="st">"conc"</span>].cd.freq_filter(</span>
-<span id="cb7-3"><a></a>    fmin<span class="op">=</span>fmin <span class="op">*</span> units.Hz,</span>
-<span id="cb7-4"><a></a>    fmax<span class="op">=</span>fmax <span class="op">*</span> units.Hz,</span>
-<span id="cb7-5"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a>fmin, fmax <span class="op">=</span> <span class="fl">0.02</span>, <span class="fl">0.5</span></span>
+<span id="cb7-2"><a href=""></a>rec[<span class="st">"conc"</span>] <span class="op">=</span> rec[<span class="st">"conc"</span>].cd.freq_filter(</span>
+<span id="cb7-3"><a href=""></a>    fmin<span class="op">=</span>fmin <span class="op">*</span> units.Hz,</span>
+<span id="cb7-4"><a href=""></a>    fmax<span class="op">=</span>fmax <span class="op">*</span> units.Hz,</span>
+<span id="cb7-5"><a href=""></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="physiological-arctifact-attenuation-frequency-filtering-2" class="slide level2">
 <h2>Physiological arctifact attenuation: frequency filtering</h2>
@@ -904,7 +904,7 @@
 <section id="epoching-and-averaging" class="slide level2">
 <h2>Epoching and averaging</h2>
 <div id="674b050b" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="bu">print</span>(rec.stim)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a><span class="bu">print</span>(rec.stim)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         onset  duration  value trial_type
 25   10.518528      10.0    1.0          A
@@ -940,22 +940,22 @@
 <img data-src="img/epochs-2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="epoching-and-averaging-3" class="slide level2">
 <h2>Epoching and averaging</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>epochs <span class="op">=</span> rec[<span class="st">"conc"</span>].cd.to_epochs(</span>
-<span id="cb10-2"><a></a>    rec.stim,  <span class="co"># stimulus dataframe</span></span>
-<span id="cb10-3"><a></a>    [<span class="st">"A"</span>, <span class="st">"B"</span>],  <span class="co"># select fingertapping events, discard others</span></span>
-<span id="cb10-4"><a></a>    before<span class="op">=</span><span class="dv">5</span> <span class="op">*</span> units.s,  <span class="co"># seconds before stimulus</span></span>
-<span id="cb10-5"><a></a>    after<span class="op">=</span><span class="dv">30</span> <span class="op">*</span> units.s,  <span class="co"># seconds after stimulus</span></span>
-<span id="cb10-6"><a></a>)</span>
-<span id="cb10-7"><a></a><span class="co"># calculate baseline</span></span>
-<span id="cb10-8"><a></a>baseline <span class="op">=</span> epochs.sel(reltime<span class="op">=</span>(epochs.reltime <span class="op">&lt;</span> <span class="dv">0</span>)).mean(<span class="st">"reltime"</span>)</span>
-<span id="cb10-9"><a></a></span>
-<span id="cb10-10"><a></a><span class="co"># subtract baseline</span></span>
-<span id="cb10-11"><a></a>epochs <span class="op">=-</span> baseline</span>
-<span id="cb10-12"><a></a>epochs <span class="op">=</span> epochs <span class="op">-</span> baseline</span>
-<span id="cb10-13"><a></a>epochs <span class="op">=</span> nirs.detrend_epochs(epochs)</span>
-<span id="cb10-14"><a></a></span>
-<span id="cb10-15"><a></a><span class="co"># average</span></span>
-<span id="cb10-16"><a></a>hrf <span class="op">=</span> epochs.groupby(<span class="st">"trial_type"</span>).mean(<span class="st">"epoch"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a>epochs <span class="op">=</span> rec[<span class="st">"conc"</span>].cd.to_epochs(</span>
+<span id="cb10-2"><a href=""></a>    rec.stim,  <span class="co"># stimulus dataframe</span></span>
+<span id="cb10-3"><a href=""></a>    [<span class="st">"A"</span>, <span class="st">"B"</span>],  <span class="co"># select fingertapping events, discard others</span></span>
+<span id="cb10-4"><a href=""></a>    before<span class="op">=</span><span class="dv">5</span> <span class="op">*</span> units.s,  <span class="co"># seconds before stimulus</span></span>
+<span id="cb10-5"><a href=""></a>    after<span class="op">=</span><span class="dv">30</span> <span class="op">*</span> units.s,  <span class="co"># seconds after stimulus</span></span>
+<span id="cb10-6"><a href=""></a>)</span>
+<span id="cb10-7"><a href=""></a><span class="co"># calculate baseline</span></span>
+<span id="cb10-8"><a href=""></a>baseline <span class="op">=</span> epochs.sel(reltime<span class="op">=</span>(epochs.reltime <span class="op">&lt;</span> <span class="dv">0</span>)).mean(<span class="st">"reltime"</span>)</span>
+<span id="cb10-9"><a href=""></a></span>
+<span id="cb10-10"><a href=""></a><span class="co"># subtract baseline</span></span>
+<span id="cb10-11"><a href=""></a>epochs <span class="op">=-</span> baseline</span>
+<span id="cb10-12"><a href=""></a>epochs <span class="op">=</span> epochs <span class="op">-</span> baseline</span>
+<span id="cb10-13"><a href=""></a>epochs <span class="op">=</span> nirs.detrend_epochs(epochs)</span>
+<span id="cb10-14"><a href=""></a></span>
+<span id="cb10-15"><a href=""></a><span class="co"># average</span></span>
+<span id="cb10-16"><a href=""></a>hrf <span class="op">=</span> epochs.groupby(<span class="st">"trial_type"</span>).mean(<span class="st">"epoch"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="epoching-and-averaging-4" class="slide level2">
 <h2>Epoching and averaging</h2>
@@ -1031,7 +1031,6 @@
 <img data-src="img/luke.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
-
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-arichi2012development" class="csl-entry" role="listitem">
@@ -1122,19 +1121,19 @@ Yücel, Meryem A., Jessica E. Anderson, De’Ja Rogers, Parisa Hajirahimi, Parya
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="site_libs/revealjs/plugin/search/search.js"></script>
-  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
