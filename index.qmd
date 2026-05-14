@@ -42,28 +42,37 @@ rec.stim = rec.stim[rec.stim["trial_type"] != "Exclude"]
 
 ## [Functional Near-Infrared]{.lightgrey} Spectroscopy
 
-## [Functional Near-Infrared]{.lightgrey} Spectroscopy
+<br>
+<br>
 
-Some materials have **different optical properties** than others (e.g., they absorbe more light of some colors).
-
-![](img/magnetic-spectrum.png){fig-align="center"}
-
-## [Functional Near-Infrared]{.lightgrey} Spectroscopy
-
+::: {.columns}
+::: {.column}
+Some materials have **different optical properties** than others (i.e., absorbe more light at some wavelengths).
+:::
+::: {.column}
 We can study the **composition of an object** by analysing how light behaves when passing through it (i.g., **spectroscopy**)
+:::
+:::
 
 ![](img/spectroscopy.png){fig-align="center"}
 
+
 ## [Functional]{.lightgrey} Near-Infrared [Spectroscopy]{.lightgrey}
+
+![](img/magnetic-spectrum.png){fig-align="center"}
 
 
 ## [Functional]{.lightgrey} Near-Infrared [Spectroscopy]{.lightgrey}
+
 
 **Oxy-haemoglobin** ([HbO]{.red}) and **deoxy-haemoglobin** ([HbR]{.blue}) absorb **near-infrared light** differently
 
 ![NIR light absorption by Hb](img/hb-absorption.png)
 
 ## Functional [Near-Infrared Spectroscopy]{.lightgrey}
+
+<br>
+<br>
 
 If we shine near-infrared light into biological tissue, we can estimate **changes in relative concentration** of [HbO]{.red} and [HbR]{.blue} time
 
@@ -99,7 +108,15 @@ If we shine near-infrared light into biological tissue, we can estimate **change
 
 **Canonical Haemodynamic Response Function (HRF)**
 
-![](img/bold-hrf.png){fig-align="center"}
+![@cinciute2019translating](img/bold-hrf.png){fig-align="center"}
+
+
+## fNIRS for experimental tasks
+
+<br>
+<br>
+
+![@hramov2020functional](img/montage3.png){fig-align="center"}
 
 ## Resources
 
@@ -115,9 +132,6 @@ Society for Functional Near Infrared Spectroscopy ([SFNIRS](https://fnirs.org))
 
 ![](img/sfnirs.png){fig-align="center"}
 
-## fNIRS for experimental tasks
-
-![](img/sources.jpg){fig-align="center"}
 
 ## fNIRS for experimental tasks
 
@@ -129,10 +143,9 @@ Society for Functional Near Infrared Spectroscopy ([SFNIRS](https://fnirs.org))
 
 ### Advantages
 
-* Commercially available (still pricey)
+* Commercially available
 * Relatively easy capping
 * Flexible and portable, robust to movement*
-* Hight-density diffuse optical tomography (HD-DOT) [@culver2001optimization]
 :::
 
 ::: {.column}
@@ -145,19 +158,6 @@ Society for Functional Near Infrared Spectroscopy ([SFNIRS](https://fnirs.org))
 * Limited spatial resolution
 :::
 :::
-
-## Hardware
-
-<br>
-<br>
-
-- [NIRx](https://nirx.net) (Germany): NIRSport2
-- [Artinis](https://www.artinis.com) (The Netherlands): Brite, OxyMon
-- [Hitachi](https://healthcaresolutions-us.fujifilm.com/) (Japan): ETG 4000
-- [GowerLabs](https://www.gowerlabs.co.uk/) (UK): LUMO (HD-DOT system)
-- [Cortivision](https://www.cortivision.com/) (Poland): Spectrum C23 fNIRS
-- [PIONIRS](https://www.pionirs.com/wp/) (Italy): NIRSBOX
-
 
 # fNIRS in neonates
 
@@ -174,7 +174,6 @@ Tested **6-72 hours after delivery**
 
 ## fNIRS at the Hospital Sant Joan de Déu
 
-### Setup
 
 ![](img/setup.png)
 
@@ -182,16 +181,13 @@ Tested **6-72 hours after delivery**
 
 ### Setup
 
-<br>
-<br>
-
 ::: {.columns}
-::: {.column width="57%"}
+::: {.column width="64%"}
 ![](img/setup-2.jpg)
 :::
 
-::: {.column width="43%"}
-![](img/setup-3.jpg)
+::: {.column width="36%"}
+![](img/testing.jpg)
 :::
 :::
 
@@ -199,7 +195,7 @@ Tested **6-72 hours after delivery**
 
 ### Setup
 
-{{< video img/setup.mp4 >}}{fig-align="center"}
+{{< video img/setup.mp4 >}}
 
 ## fNIRS at the Hospital Sant Joan de Déu
 
@@ -291,6 +287,31 @@ Tested **6-72 hours after delivery**
 * **Environment**: hospital ward
 :::
 
+
+# Participant case study
+
+## Datasets
+
+<br>
+<br>
+
+::: {.columns}
+::: {.column}
+### Neonates
+
+García-Castro G., Sofocleous C., Gervain, J., Alarcón Allen A., and Santolin C. (in prep)
+:::
+::: {.column}
+### Adults
+
+Hernández-Sauret, A., García-Castro, G., & Redolar-Ripoll, E. (2026). *Brain Topography*, 39(1), 2. [https://link.springer.com/article/10.1007/s10548-025-01157-4](https://link.springer.com/article/10.1007/s10548-025-01157-4)
+:::
+:::
+
+## Pipeline suggestion
+
+![](img/pipeline.png)
+
 ## Designing a preprocessing pipeline
 
 ### The FRESH initiative
@@ -314,17 +335,6 @@ Yücel, M. A., Luke, R., Mesquita, R. C., von Lühmann, A., Mehler, D. M., Lühr
 * Teams with higher self-reported analysis confidence, which correlated with years of fNIRS experience, showed greater agreement
 * Main sources of variability were related to how poor-quality data were handled
 
-## Designing a preprocessing pipeline
-
-### The FRESH initiative
-
-![](img/fresh-2.png){fig-align="center"}
-
-## Designing a preprocessing pipeline
-
-### The FRESH initiative
-
-![](img/fresh.png){fig-align="center"}
 
 ## Designing a preprocessing pipeline
 
@@ -348,18 +358,6 @@ Gemignani, J., & Gervain, J. (2021). **Comparing different pre-processing routin
 * The **ordering** of some preprocessing steps does not impact conclusions overall
 :::
 
-## Designing a preprocessing pipeline
-
-<br>
-<br>
-
-![](img/gemignani-2.jpg){fig-align="center"}
-
-
-## Pipeline suggestion
-
-![](img/pipeline.png)
-
 ## Software
 
 <br>
@@ -379,26 +377,6 @@ Gemignani, J., & Gervain, J. (2021). **Comparing different pre-processing routin
 [Cedalion](http://cedalion.tools/) [@middell2026cedalion]
 
 ![](img/cedalion.png)
-
-# Participant case study
-
-## Datasets
-
-<br>
-<br>
-
-::: {.columns}
-::: {.column}
-### Neonates
-
-García-Castro G., Sofocleous C., Gervain, J., Alarcón Allen A., and Santolin C. (in prep)
-:::
-::: {.column}
-### Adults
-
-Hernández-Sauret, A., García-Castro, G., & Redolar-Ripoll, E. (2026). *Brain Topography*, 39(1), 2. [https://link.springer.com/article/10.1007/s10548-025-01157-4](https://link.springer.com/article/10.1007/s10548-025-01157-4)
-:::
-:::
 
 ## Datasets
 
@@ -465,6 +443,10 @@ for wl_i, wl in enumerate(amp.wavelength.values):
 ## The good: adult data
 
 ![](img/good-amp-3.png){fig-align="center"}
+
+## The good: adult data
+
+![](img/good-amp-4.png){fig-align="center"}
 
 ## The bad: breastfeeding neonate
 
@@ -668,7 +650,7 @@ Motion arctifacts (MA) are caused my changes optode position due to movement (ca
 ### Signal correction methods
 
 * **Wavelet filtering** [@molavi2012waveletbased]
-* **Temporal deivative distribution repair (TDDR)** [@fishburn2019temporal]
+* **Temporal derivative distribution repair (TDDR)** [@fishburn2019temporal]
 * Savitzky-Golay spline interpolation [@jahani2018motion]
 * Principal component analysis (PCA)
 
@@ -737,7 +719,7 @@ Constant in the mBLL equation. Depends on the characteristics of the underlying 
 
 ## Physiological arctifact attenuation: frequency filtering
 
-![](img/physio.jpg){fig-align="center"}
+![@hocke2018automated](img/physio2.png){fig-align="center"}
 
 ## Physiological arctifact attenuation: frequency filtering
 
@@ -801,7 +783,7 @@ print(rec.stim)
 ```python
 epochs = rec["conc"].cd.to_epochs(
     rec.stim,  # stimulus dataframe
-    ["FTapping/Left", "FTapping/Right"],  # select fingertapping events, discard others
+    ["A", "B"],  # select fingertapping events, discard others
     before=5 * units.s,  # seconds before stimulus
     after=30 * units.s,  # seconds after stimulus
 )
@@ -819,6 +801,12 @@ hrf = epochs.groupby("trial_type").mean("epoch")
 ## Epoching and averaging
 
 ![](img/epochs-3.png){fig-align="center"}
+
+## What now?
+
+![](img/pipeline.png)
+
+# Thank you for you attention!
 
 ## Skin and hair type
 
@@ -843,6 +831,30 @@ $$
 \end{aligned}
 $$
 
+
+## Hardware
+
+<br>
+<br>
+
+- [NIRx](https://nirx.net) (Germany): NIRSport2
+- [Artinis](https://www.artinis.com) (The Netherlands): Brite, OxyMon
+- [Hitachi](https://healthcaresolutions-us.fujifilm.com/) (Japan): ETG 4000
+- [GowerLabs](https://www.gowerlabs.co.uk/) (UK): LUMO (HD-DOT system)
+- [Cortivision](https://www.cortivision.com/) (Poland): Spectrum C23 fNIRS
+- [PIONIRS](https://www.pionirs.com/wp/) (Italy): NIRSBOX
+
+## Designing a preprocessing pipeline
+
+### The FRESH initiative
+
+![](img/fresh-2.png){fig-align="center"}
+
+## Designing a preprocessing pipeline
+
+### The FRESH initiative
+
+![](img/fresh.png){fig-align="center"}
 
 ## Data organisation: BIDS format
 

@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="dcterms.date" content="2026-05-15">
-  <title>Functional Near-Infrared Spectroscopy in Neonatal Research</title>
+  <title>fNIRS in Neonatal Research</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -117,7 +117,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-983ad262d50158761a3fa10514dc32c2.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-906beb9aeb0261ac0c8f227f2f2de10d.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -216,7 +216,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="img/background.svg" class="quarto-title-block center">
-  <h1 class="title">Functional Near-Infrared Spectroscopy in Neonatal Research</h1>
+  <h1 class="title">fNIRS in Neonatal Research</h1>
   <p class="subtitle">Experimental design, data analysis and real-data preprocessing with Python</p>
 
 <div class="quarto-title-authors">
@@ -248,27 +248,27 @@
 </section>
 <section id="functional-near-infrared-spectroscopy-1" class="slide level2">
 <h2><span class="lightgrey">Functional Near-Infrared</span> Spectroscopy</h2>
-</section>
+<p><br> <br></p>
+<div class="columns">
+<div class="column">
+<p>Some materials have <strong>different optical properties</strong> than others (i.e., absorbe more light at some wavelengths).</p>
+</div><div class="column">
+<p>We can study the <strong>composition of an object</strong> by analysing how light behaves when passing through it (i.g., <strong>spectroscopy</strong>)</p>
+</div></div>
+
+<img data-src="img/spectroscopy.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="functional-near-infrared-spectroscopy-2" class="slide level2">
-<h2><span class="lightgrey">Functional Near-Infrared</span> Spectroscopy</h2>
-<p>Some materials have <strong>different optical properties</strong> than others (e.g., they absorbe more light of some colors).</p>
+<h2><span class="lightgrey">Functional</span> Near-Infrared <span class="lightgrey">Spectroscopy</span></h2>
 
 <img data-src="img/magnetic-spectrum.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="functional-near-infrared-spectroscopy-3" class="slide level2">
-<h2><span class="lightgrey">Functional Near-Infrared</span> Spectroscopy</h2>
-<p>We can study the <strong>composition of an object</strong> by analysing how light behaves when passing through it (i.g., <strong>spectroscopy</strong>)</p>
-
-<img data-src="img/spectroscopy.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="functional-near-infrared-spectroscopy-4" class="slide level2">
-<h2><span class="lightgrey">Functional</span> Near-Infrared <span class="lightgrey">Spectroscopy</span></h2>
-</section>
-<section id="functional-near-infrared-spectroscopy-5" class="slide level2">
 <h2><span class="lightgrey">Functional</span> Near-Infrared <span class="lightgrey">Spectroscopy</span></h2>
 <p><strong>Oxy-haemoglobin</strong> (<span class="red">HbO</span>) and <strong>deoxy-haemoglobin</strong> (<span class="blue">HbR</span>) absorb <strong>near-infrared light</strong> differently</p>
 
 <img data-src="img/hb-absorption.png" class="r-stretch quarto-figure-center"><p class="caption">NIR light absorption by Hb</p></section>
-<section id="functional-near-infrared-spectroscopy-6" class="slide level2">
+<section id="functional-near-infrared-spectroscopy-4" class="slide level2">
 <h2>Functional <span class="lightgrey">Near-Infrared Spectroscopy</span></h2>
+<p><br> <br></p>
 <p>If we shine near-infrared light into biological tissue, we can estimate <strong>changes in relative concentration</strong> of <span class="red">HbO</span> and <span class="blue">HbR</span> time</p>
 <div class="box center">
 <p><strong>modified Beer-Lambert Law (mBLL)</strong></p>
@@ -279,7 +279,7 @@
 <li>Assumes that the scattering properties of tissue do not vary with time</li>
 </ul>
 </section>
-<section id="functional-near-infrared-spectroscopy-7" class="slide level2">
+<section id="functional-near-infrared-spectroscopy-5" class="slide level2">
 <h2>Functional <span class="lightgrey">Near-Infrared Spectroscopy</span></h2>
 <p><br> <br></p>
 <div class="columns">
@@ -297,12 +297,17 @@
 </div>
 </div></div>
 </section>
-<section id="functional-near-infrared-spectroscopy-8" class="slide level2">
+<section id="functional-near-infrared-spectroscopy-6" class="slide level2">
 <h2>Functional <span class="lightgrey">Near-Infrared Spectroscopy</span></h2>
 <p><br> <br></p>
 <p><strong>Canonical Haemodynamic Response Function (HRF)</strong></p>
 
-<img data-src="img/bold-hrf.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<img data-src="img/bold-hrf.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="cinciute2019translating">Cinciute (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></p></section>
+<section id="fnirs-for-experimental-tasks" class="slide level2">
+<h2>fNIRS for experimental tasks</h2>
+<p><br> <br></p>
+
+<img data-src="img/montage3.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="hramov2020functional">Hramov et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></section>
 <section id="resources" class="slide level2">
 <h2>Resources</h2>
 <p><strong>The fNIRS Glossary project</strong> <span class="citation" data-cites="stute2025fnirs">(<a href="#/references" role="doc-biblioref" onclick="">Stute et al. 2025</a>)</span></p>
@@ -314,10 +319,6 @@
 <p>Society for Functional Near Infrared Spectroscopy (<a href="https://fnirs.org">SFNIRS</a>)</p>
 
 <img data-src="img/sfnirs.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="fnirs-for-experimental-tasks" class="slide level2">
-<h2>fNIRS for experimental tasks</h2>
-
-<img data-src="img/sources.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="fnirs-for-experimental-tasks-1" class="slide level2">
 <h2>fNIRS for experimental tasks</h2>
 <p><br> <br></p>
@@ -325,10 +326,9 @@
 <div class="column">
 <h3 id="advantages">Advantages</h3>
 <ul>
-<li>Commercially available (still pricey)</li>
+<li>Commercially available</li>
 <li>Relatively easy capping</li>
 <li>Flexible and portable, robust to movement*</li>
-<li>Hight-density diffuse optical tomography (HD-DOT) <span class="citation" data-cites="culver2001optimization">(<a href="#/references" role="doc-biblioref" onclick="">Culver et al. 2001</a>)</span></li>
 </ul>
 </div><div class="column">
 <h3 id="limitations">Limitations</h3>
@@ -339,18 +339,6 @@
 <li>Limited spatial resolution</li>
 </ul>
 </div></div>
-</section>
-<section id="hardware" class="slide level2">
-<h2>Hardware</h2>
-<p><br> <br></p>
-<ul>
-<li><a href="https://nirx.net">NIRx</a> (Germany): NIRSport2</li>
-<li><a href="https://www.artinis.com">Artinis</a> (The Netherlands): Brite, OxyMon</li>
-<li><a href="https://healthcaresolutions-us.fujifilm.com/">Hitachi</a> (Japan): ETG 4000</li>
-<li><a href="https://www.gowerlabs.co.uk/">GowerLabs</a> (UK): LUMO (HD-DOT system)</li>
-<li><a href="https://www.cortivision.com/">Cortivision</a> (Poland): Spectrum C23 fNIRS</li>
-<li><a href="https://www.pionirs.com/wp/">PIONIRS</a> (Italy): NIRSBOX</li>
-</ul>
 </section>
 <section>
 <section id="fnirs-in-neonates" class="title-slide slide level1 center">
@@ -366,24 +354,22 @@
 </section>
 <section id="fnirs-at-the-hospital-sant-joan-de-déu-1" class="slide level2">
 <h2>fNIRS at the Hospital Sant Joan de Déu</h2>
-<h3 id="setup">Setup</h3>
 
 <img data-src="img/setup.png" class="r-stretch"></section>
 <section id="fnirs-at-the-hospital-sant-joan-de-déu-2" class="slide level2">
 <h2>fNIRS at the Hospital Sant Joan de Déu</h2>
-<h3 id="setup-1">Setup</h3>
-<p><br> <br></p>
+<h3 id="setup">Setup</h3>
 <div class="columns">
-<div class="column" style="width:57%;">
+<div class="column" style="width:64%;">
 <p><img data-src="img/setup-2.jpg"></p>
-</div><div class="column" style="width:43%;">
-<p><img data-src="img/setup-3.jpg"></p>
+</div><div class="column" style="width:36%;">
+<p><img data-src="img/testing.jpg"></p>
 </div></div>
 </section>
 <section id="fnirs-at-the-hospital-sant-joan-de-déu-3" class="slide level2">
 <h2>fNIRS at the Hospital Sant Joan de Déu</h2>
-<h3 id="setup-2">Setup</h3>
-<p><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="img/setup.mp4"></video>{fig-align=“center”}</p>
+<h3 id="setup-1">Setup</h3>
+<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="img/setup.mp4"></video>
 </section>
 <section id="fnirs-at-the-hospital-sant-joan-de-déu-4" class="slide level2">
 <h2>fNIRS at the Hospital Sant Joan de Déu</h2>
@@ -496,7 +482,28 @@
 <li class="fragment"><strong>Head morphology</strong>: spatial registration is challenging</li>
 <li class="fragment"><strong>Environment</strong>: hospital ward</li>
 </ul>
+</section></section>
+<section>
+<section id="participant-case-study" class="title-slide slide level1 center">
+<h1>Participant case study</h1>
+
 </section>
+<section id="datasets" class="slide level2">
+<h2>Datasets</h2>
+<p><br> <br></p>
+<div class="columns">
+<div class="column">
+<h3 id="neonates">Neonates</h3>
+<p>García-Castro G., Sofocleous C., Gervain, J., Alarcón Allen A., and Santolin C. (in prep)</p>
+</div><div class="column">
+<h3 id="adults">Adults</h3>
+<p>Hernández-Sauret, A., García-Castro, G., &amp; Redolar-Ripoll, E. (2026). <em>Brain Topography</em>, 39(1), 2. <a href="https://link.springer.com/article/10.1007/s10548-025-01157-4">https://link.springer.com/article/10.1007/s10548-025-01157-4</a></p>
+</div></div>
+</section>
+<section id="pipeline-suggestion" class="slide level2">
+<h2>Pipeline suggestion</h2>
+
+<img data-src="img/pipeline.png" class="r-stretch"></section>
 <section id="designing-a-preprocessing-pipeline" class="slide level2">
 <h2>Designing a preprocessing pipeline</h2>
 <h3 id="the-fresh-initiative">The FRESH initiative</h3>
@@ -518,22 +525,12 @@
 </section>
 <section id="designing-a-preprocessing-pipeline-2" class="slide level2">
 <h2>Designing a preprocessing pipeline</h2>
-<h3 id="the-fresh-initiative-2">The FRESH initiative</h3>
-
-<img data-src="img/fresh-2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="designing-a-preprocessing-pipeline-3" class="slide level2">
-<h2>Designing a preprocessing pipeline</h2>
-<h3 id="the-fresh-initiative-3">The FRESH initiative</h3>
-
-<img data-src="img/fresh.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="designing-a-preprocessing-pipeline-4" class="slide level2">
-<h2>Designing a preprocessing pipeline</h2>
 <p><br> <br></p>
 <div class="box">
 <p>Gemignani, J., &amp; Gervain, J. (2021). <strong>Comparing different pre-processing routines for infant fNIRS data</strong>. <em>Developmental Cognitive Neuroscience</em>, 48, 100943.</p>
 </div>
 </section>
-<section id="designing-a-preprocessing-pipeline-5" class="slide level2">
+<section id="designing-a-preprocessing-pipeline-3" class="slide level2">
 <h2>Designing a preprocessing pipeline</h2>
 <p><br> <br></p>
 <ul>
@@ -545,15 +542,6 @@
 <li class="fragment">The <strong>ordering</strong> of some preprocessing steps does not impact conclusions overall</li>
 </ul>
 </section>
-<section id="designing-a-preprocessing-pipeline-6" class="slide level2">
-<h2>Designing a preprocessing pipeline</h2>
-<p><br> <br></p>
-
-<img data-src="img/gemignani-2.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="pipeline-suggestion" class="slide level2">
-<h2>Pipeline suggestion</h2>
-
-<img data-src="img/pipeline.png" class="r-stretch"></section>
 <section id="software" class="slide level2">
 <h2>Software</h2>
 <p><br> <br></p>
@@ -572,24 +560,7 @@
 <h2>Software</h2>
 <p><a href="http://cedalion.tools/">Cedalion</a> <span class="citation" data-cites="middell2026cedalion">(<a href="#/references" role="doc-biblioref" onclick="">Middell et al. 2026</a>)</span></p>
 
-<img data-src="img/cedalion.png" class="r-stretch"></section></section>
-<section>
-<section id="participant-case-study" class="title-slide slide level1 center">
-<h1>Participant case study</h1>
-
-</section>
-<section id="datasets" class="slide level2">
-<h2>Datasets</h2>
-<p><br> <br></p>
-<div class="columns">
-<div class="column">
-<h3 id="neonates">Neonates</h3>
-<p>García-Castro G., Sofocleous C., Gervain, J., Alarcón Allen A., and Santolin C. (in prep)</p>
-</div><div class="column">
-<h3 id="adults">Adults</h3>
-<p>Hernández-Sauret, A., García-Castro, G., &amp; Redolar-Ripoll, E. (2026). <em>Brain Topography</em>, 39(1), 2. <a href="https://link.springer.com/article/10.1007/s10548-025-01157-4">https://link.springer.com/article/10.1007/s10548-025-01157-4</a></p>
-</div></div>
-</section>
+<img data-src="img/cedalion.png" class="r-stretch"></section>
 <section id="datasets-1" class="slide level2">
 <h2>Datasets</h2>
 
@@ -645,6 +616,10 @@
 <h2>The good: adult data</h2>
 
 <img data-src="img/good-amp-3.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="the-good-adult-data-5" class="slide level2">
+<h2>The good: adult data</h2>
+
+<img data-src="img/good-amp-4.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="the-bad-breastfeeding-neonate" class="slide level2">
 <h2>The bad: breastfeeding neonate</h2>
 
@@ -809,7 +784,7 @@
 <h3 id="signal-correction-methods">Signal correction methods</h3>
 <ul>
 <li><strong>Wavelet filtering</strong> <span class="citation" data-cites="molavi2012waveletbased">(<a href="#/references" role="doc-biblioref" onclick="">Molavi and Dumont 2012</a>)</span></li>
-<li><strong>Temporal deivative distribution repair (TDDR)</strong> <span class="citation" data-cites="fishburn2019temporal">(<a href="#/references" role="doc-biblioref" onclick="">Fishburn et al. 2019</a>)</span></li>
+<li><strong>Temporal derivative distribution repair (TDDR)</strong> <span class="citation" data-cites="fishburn2019temporal">(<a href="#/references" role="doc-biblioref" onclick="">Fishburn et al. 2019</a>)</span></li>
 <li>Savitzky-Golay spline interpolation <span class="citation" data-cites="jahani2018motion">(<a href="#/references" role="doc-biblioref" onclick="">Jahani et al. 2018</a>)</span></li>
 <li>Principal component analysis (PCA)</li>
 </ul>
@@ -861,7 +836,7 @@
 <section id="physiological-arctifact-attenuation-frequency-filtering" class="slide level2">
 <h2>Physiological arctifact attenuation: frequency filtering</h2>
 
-<img data-src="img/physio.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<img data-src="img/physio2.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="hocke2018automated">Hocke et al. (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span></p></section>
 <section id="physiological-arctifact-attenuation-frequency-filtering-1" class="slide level2">
 <h2>Physiological arctifact attenuation: frequency filtering</h2>
 <p><br> <br></p>
@@ -967,7 +942,7 @@
 <h2>Epoching and averaging</h2>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a>epochs <span class="op">=</span> rec[<span class="st">"conc"</span>].cd.to_epochs(</span>
 <span id="cb10-2"><a href=""></a>    rec.stim,  <span class="co"># stimulus dataframe</span></span>
-<span id="cb10-3"><a href=""></a>    [<span class="st">"FTapping/Left"</span>, <span class="st">"FTapping/Right"</span>],  <span class="co"># select fingertapping events, discard others</span></span>
+<span id="cb10-3"><a href=""></a>    [<span class="st">"A"</span>, <span class="st">"B"</span>],  <span class="co"># select fingertapping events, discard others</span></span>
 <span id="cb10-4"><a href=""></a>    before<span class="op">=</span><span class="dv">5</span> <span class="op">*</span> units.s,  <span class="co"># seconds before stimulus</span></span>
 <span id="cb10-5"><a href=""></a>    after<span class="op">=</span><span class="dv">30</span> <span class="op">*</span> units.s,  <span class="co"># seconds after stimulus</span></span>
 <span id="cb10-6"><a href=""></a>)</span>
@@ -986,6 +961,15 @@
 <h2>Epoching and averaging</h2>
 
 <img data-src="img/epochs-3.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="what-now" class="slide level2">
+<h2>What now?</h2>
+
+<img data-src="img/pipeline.png" class="r-stretch"></section></section>
+<section>
+<section id="thank-you-for-you-attention" class="title-slide slide level1 center">
+<h1>Thank you for you attention!</h1>
+
+</section>
 <section id="skin-and-hair-type" class="slide level2">
 <h2>Skin and hair type</h2>
 <p><span class="citation" data-cites="yucel2025quantifying">Yücel et al. (<a href="#/references" role="doc-biblioref" onclick="">2025</a>)</span>:</p>
@@ -994,7 +978,7 @@
 <li>Fischer-Saller Scale, Andre Walker Hair Typing System, and the FIA Hair Typing System</li>
 </ul>
 </section>
-<section id="functional-near-infrared-spectroscopy-9" class="slide level2">
+<section id="functional-near-infrared-spectroscopy-7" class="slide level2">
 <h2>Functional <span class="lightgrey">Near-Infrared Spectroscopy</span></h2>
 <p>If we shine near-infrared light into biological tissue, we can estimate <strong>changes in relative concentration</strong> of <span class="red">HbO</span> and <span class="blue">HbR</span> time (<strong>functional</strong>).</p>
 <div class="box center">
@@ -1008,6 +992,28 @@
 \end{aligned}
 \]</span></p>
 </section>
+<section id="hardware" class="slide level2">
+<h2>Hardware</h2>
+<p><br> <br></p>
+<ul>
+<li><a href="https://nirx.net">NIRx</a> (Germany): NIRSport2</li>
+<li><a href="https://www.artinis.com">Artinis</a> (The Netherlands): Brite, OxyMon</li>
+<li><a href="https://healthcaresolutions-us.fujifilm.com/">Hitachi</a> (Japan): ETG 4000</li>
+<li><a href="https://www.gowerlabs.co.uk/">GowerLabs</a> (UK): LUMO (HD-DOT system)</li>
+<li><a href="https://www.cortivision.com/">Cortivision</a> (Poland): Spectrum C23 fNIRS</li>
+<li><a href="https://www.pionirs.com/wp/">PIONIRS</a> (Italy): NIRSBOX</li>
+</ul>
+</section>
+<section id="designing-a-preprocessing-pipeline-4" class="slide level2">
+<h2>Designing a preprocessing pipeline</h2>
+<h3 id="the-fresh-initiative-2">The FRESH initiative</h3>
+
+<img data-src="img/fresh-2.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="designing-a-preprocessing-pipeline-5" class="slide level2">
+<h2>Designing a preprocessing pipeline</h2>
+<h3 id="the-fresh-initiative-3">The FRESH initiative</h3>
+
+<img data-src="img/fresh.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="data-organisation-bids-format" class="slide level2">
 <h2>Data organisation: BIDS format</h2>
 <p><a href="https://bids.neuroimaging.io">bids.neuroimaging.io</a></p>
@@ -1036,14 +1042,14 @@ Beaton, Samuel, Borja Blanco, Chiara Bulgarelli, Clare E Elwell, Sarah Lloyd-Fox
 <div id="ref-brigadoi2014motion" class="csl-entry" role="listitem">
 Brigadoi, Sabrina, Lisa Ceccherini, Simone Cutini, Fabio Scarpa, Pietro Scatturin, Juliette Selb, Louis Gagnon, David A Boas, and Robert J Cooper. 2014. <span>“Motion Artifacts in Functional Near-Infrared Spectroscopy: A Comparison of Motion Correction Techniques Applied to Real Cognitive Data.”</span> <em>Neuroimage</em> 85: 181–91.
 </div>
+<div id="ref-cinciute2019translating" class="csl-entry" role="listitem">
+Cinciute, Sigita. 2019. <span>“Translating the Hemodynamic Response: Why Focused Interdisciplinary Integration Should Matter for the Future of Functional Neuroimaging.”</span> <em>PeerJ</em> 7: e6621.
+</div>
 <div id="ref-cristia2013online" class="csl-entry" role="listitem">
 Cristia, Alejandrina, Emmanuel Dupoux, Yoko Hakuno, Sarah Lloyd-Fox, Manuela Schuetze, José Kivits, Tomas Bergvelt, et al. 2013. <span>“An Online Database of Infant Functional Near Infrared Spectroscopy Studies: A Community-Augmented Systematic Review.”</span> <em>PloS One</em> 8 (3): e58906.
 </div>
 <div id="ref-cui2015sensitivity" class="csl-entry" role="listitem">
 Cui, XU, Joseph M Baker, Ning Liu, and Allan L Reiss. 2015. <span>“Sensitivity of fNIRS Measurement to Head Motion: An Applied Use of Smartphones in the Lab.”</span> <em>Journal of Neuroscience Methods</em> 245: 37–43.
-</div>
-<div id="ref-culver2001optimization" class="csl-entry" role="listitem">
-Culver, JP, V Ntziachristos, MJ Holboke, and AG Yodh. 2001. <span>“Optimization of Optode Arrangements for Diffuse Optical Tomography: A Singular-Value Analysis.”</span> <em>Optics Letters</em> 26 (10): 701–3.
 </div>
 <div id="ref-delaire2025nirstorm" class="csl-entry" role="listitem">
 Delaire, Édouard, Thomas Vincent, Zhengchen Cai, Alexis Machado, Laurent Hugueville, Denis Schwartz, Francois Tadel, et al. 2025. <span>“NIRSTORM: A Brainstorm Extension Dedicated to Functional Near-Infrared Spectroscopy Data Analysis, Advanced 3D Reconstructions, and Optimal Probe Design.”</span> <em>Neurophotonics</em> 12 (2): 025011–11.
@@ -1059,6 +1065,12 @@ Fishburn, Frank A., Ruth S. Ludlum, Chandan J. Vaidya, and Andrei V. Medvedev. 2
 </div>
 <div id="ref-gramfort2013meg" class="csl-entry" role="listitem">
 Gramfort, Alexandre, Martin Luessi, Eric Larson, Denis A. Engemann, Daniel Strohmeier, Christian Brodbeck, Roman Goj, et al. 2013. <span>“<span>MEG</span> and <span>EEG</span> Data Analysis with <span>MNE-Python</span>.”</span> <em>Frontiers in Neuroscience</em> 7 (December). <a href="https://doi.org/10.3389/fnins.2013.00267">https://doi.org/10.3389/fnins.2013.00267</a>.
+</div>
+<div id="ref-hocke2018automated" class="csl-entry" role="listitem">
+Hocke, Lia M, Ibukunoluwa K Oni, Chris C Duszynski, Alex V Corrigan, Blaise deB Frederick, and Jeff F Dunn. 2018. <span>“Automated Processing of fNIRS Data—a Visual Guide to the Pitfalls and Consequences.”</span> <em>Algorithms</em> 11 (5): 67.
+</div>
+<div id="ref-hramov2020functional" class="csl-entry" role="listitem">
+Hramov, Alexander E, Vadim Grubov, Artem Badarin, Vladimir A Maksimenko, and Alexander N Pisarchik. 2020. <span>“Functional Near-Infrared Spectroscopy for the Classification of Motor-Related Brain Activity on the Sensor-Level.”</span> <em>Sensors</em> 20 (8): 2362.
 </div>
 <div id="ref-huppert2009homer" class="csl-entry" role="listitem">
 Huppert, Theodore J., Solomon G. Diamond, Maria A. Franceschini, and David A. Boas. 2009. <span>“<span>HomER</span>: A Review of Time-Series Analysis Methods for Near-Infrared Spectroscopy of the Brain.”</span> <em>Applied Optics</em> 48 (10): D280–98. <a href="https://doi.org/10.1364/AO.48.00D280">https://doi.org/10.1364/AO.48.00D280</a>.
