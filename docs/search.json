@@ -1,0 +1,604 @@
+[
+  {
+    "objectID": "index.html#about-us",
+    "href": "index.html#about-us",
+    "title": "fNIRS in Neonatal Research",
+    "section": "About us",
+    "text": "About us\nNeuroDevelopment and Comparative Cognition (NeuroDevCo)\n\nHORIZON-ERC-2023-StG: GALA (Gates to Language)"
+  },
+  {
+    "objectID": "index.html#functional-near-infrared-spectroscopy",
+    "href": "index.html#functional-near-infrared-spectroscopy",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Functional Near-Infrared Spectroscopy",
+    "text": "Functional Near-Infrared Spectroscopy"
+  },
+  {
+    "objectID": "index.html#functional-near-infrared-spectroscopy-1",
+    "href": "index.html#functional-near-infrared-spectroscopy-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Functional Near-Infrared Spectroscopy",
+    "text": "Functional Near-Infrared Spectroscopy\n \n\n\nSome materials have different optical properties than others (i.e., absorbe more light at some wavelengths).\n\nWe can study the composition of an object by analysing how light behaves when passing through it (i.g., spectroscopy)"
+  },
+  {
+    "objectID": "index.html#functional-near-infrared-spectroscopy-2",
+    "href": "index.html#functional-near-infrared-spectroscopy-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Functional Near-Infrared Spectroscopy",
+    "text": "Functional Near-Infrared Spectroscopy"
+  },
+  {
+    "objectID": "index.html#functional-near-infrared-spectroscopy-3",
+    "href": "index.html#functional-near-infrared-spectroscopy-3",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Functional Near-Infrared Spectroscopy",
+    "text": "Functional Near-Infrared Spectroscopy\nOxy-haemoglobin (HbO) and deoxy-haemoglobin (HbR) absorb near-infrared light differently\n\nNIR light absorption by Hb"
+  },
+  {
+    "objectID": "index.html#functional-near-infrared-spectroscopy-4",
+    "href": "index.html#functional-near-infrared-spectroscopy-4",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Functional Near-Infrared Spectroscopy",
+    "text": "Functional Near-Infrared Spectroscopy\n \nIf we shine near-infrared light into biological tissue, we can estimate changes in relative concentration of HbO and HbR time\n\nmodified Beer-Lambert Law (mBLL)\n\n\nDescribes changes in light absorption of underlying tissue using continuous waves methods\nBased on a generalization of Beer-Lambert law\nAssumes that the scattering properties of tissue do not vary with time"
+  },
+  {
+    "objectID": "index.html#functional-near-infrared-spectroscopy-5",
+    "href": "index.html#functional-near-infrared-spectroscopy-5",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Functional Near-Infrared Spectroscopy",
+    "text": "Functional Near-Infrared Spectroscopy\n \n\n\n\nBlood-Oxygen-Level-Dependent (BOLD) response\nSurplus of HbO sent to recently active brain areas\nTakes ~15 seconds recover baseline"
+  },
+  {
+    "objectID": "index.html#functional-near-infrared-spectroscopy-6",
+    "href": "index.html#functional-near-infrared-spectroscopy-6",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Functional Near-Infrared Spectroscopy",
+    "text": "Functional Near-Infrared Spectroscopy\n \nCanonical Haemodynamic Response Function (HRF)\n\nCinciute (2019)"
+  },
+  {
+    "objectID": "index.html#fnirs-for-experimental-tasks",
+    "href": "index.html#fnirs-for-experimental-tasks",
+    "title": "fNIRS in Neonatal Research",
+    "section": "fNIRS for experimental tasks",
+    "text": "fNIRS for experimental tasks\n \n\nHramov et al. (2020)"
+  },
+  {
+    "objectID": "index.html#resources",
+    "href": "index.html#resources",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Resources",
+    "text": "Resources\nThe fNIRS Glossary project (Stute et al. 2025)\nhttps://openfnirs.org/standards/fnirs-glossary-project/"
+  },
+  {
+    "objectID": "index.html#resources-1",
+    "href": "index.html#resources-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Resources",
+    "text": "Resources\nSociety for Functional Near Infrared Spectroscopy (SFNIRS)"
+  },
+  {
+    "objectID": "index.html#fnirs-for-experimental-tasks-1",
+    "href": "index.html#fnirs-for-experimental-tasks-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "fNIRS for experimental tasks",
+    "text": "fNIRS for experimental tasks\n \n\n\nAdvantages\n\nCommercially available\nRelatively easy capping\nFlexible and portable, robust to movement*\n\n\nLimitations\n\nLimited access to sub-cortical regions (~3 cm)*\nTemporal resolution constrained by haemodynamics\nRelatively pricey\nLimited spatial resolution"
+  },
+  {
+    "objectID": "index.html#fnirs-at-the-hospital-sant-joan-de-déu",
+    "href": "index.html#fnirs-at-the-hospital-sant-joan-de-déu",
+    "title": "fNIRS in Neonatal Research",
+    "section": "fNIRS at the Hospital Sant Joan de Déu",
+    "text": "fNIRS at the Hospital Sant Joan de Déu\n \nHealthy participants: ≥ 2,700 g & ≥ 8 Apgar-10 & ≥37 weeks post-mentrual age\nTested 6-72 hours after delivery\nCot-side testing inside hospital room (Àrea de la Dona)"
+  },
+  {
+    "objectID": "index.html#fnirs-at-the-hospital-sant-joan-de-déu-1",
+    "href": "index.html#fnirs-at-the-hospital-sant-joan-de-déu-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "fNIRS at the Hospital Sant Joan de Déu",
+    "text": "fNIRS at the Hospital Sant Joan de Déu"
+  },
+  {
+    "objectID": "index.html#fnirs-at-the-hospital-sant-joan-de-déu-2",
+    "href": "index.html#fnirs-at-the-hospital-sant-joan-de-déu-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "fNIRS at the Hospital Sant Joan de Déu",
+    "text": "fNIRS at the Hospital Sant Joan de Déu\nSetup"
+  },
+  {
+    "objectID": "index.html#fnirs-at-the-hospital-sant-joan-de-déu-3",
+    "href": "index.html#fnirs-at-the-hospital-sant-joan-de-déu-3",
+    "title": "fNIRS in Neonatal Research",
+    "section": "fNIRS at the Hospital Sant Joan de Déu",
+    "text": "fNIRS at the Hospital Sant Joan de Déu\nSetup"
+  },
+  {
+    "objectID": "index.html#fnirs-at-the-hospital-sant-joan-de-déu-4",
+    "href": "index.html#fnirs-at-the-hospital-sant-joan-de-déu-4",
+    "title": "fNIRS in Neonatal Research",
+    "section": "fNIRS at the Hospital Sant Joan de Déu",
+    "text": "fNIRS at the Hospital Sant Joan de Déu\nMontage/optode layout"
+  },
+  {
+    "objectID": "index.html#fnirs-at-the-hospital-sant-joan-de-déu-5",
+    "href": "index.html#fnirs-at-the-hospital-sant-joan-de-déu-5",
+    "title": "fNIRS in Neonatal Research",
+    "section": "fNIRS at the Hospital Sant Joan de Déu",
+    "text": "fNIRS at the Hospital Sant Joan de Déu\nMontage/optode layout"
+  },
+  {
+    "objectID": "index.html#challenges-in-neonatal-fnirs",
+    "href": "index.html#challenges-in-neonatal-fnirs",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Challenges in neonatal fNIRS",
+    "text": "Challenges in neonatal fNIRS\n \n\nTrue shape of the HRF is relatively unknown and variable within/between partiicpants and studies (Cristia et al. 2013; Lloyd-Fox, Blasi, and Elwell 2010)"
+  },
+  {
+    "objectID": "index.html#fnirs-in-neonates-1",
+    "href": "index.html#fnirs-in-neonates-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "fNIRS in neonates",
+    "text": "fNIRS in neonates\n\n\nCanonical response\n\n\n\nIssard and Gervain (2018)"
+  },
+  {
+    "objectID": "index.html#fnirs-in-neonates-2",
+    "href": "index.html#fnirs-in-neonates-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "fNIRS in neonates",
+    "text": "fNIRS in neonates\n\n\nCanonical response\n\n\n\n\n\n\nInverted response\n\n\n\nIssard and Gervain (2018)"
+  },
+  {
+    "objectID": "index.html#challenges-in-neonatal-fnirs-1",
+    "href": "index.html#challenges-in-neonatal-fnirs-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Challenges in neonatal fNIRS",
+    "text": "Challenges in neonatal fNIRS\n \n\nTrue shape of the HRF is relatively unknown and variable within/betweem partiicpants and studies (Cristia et al. 2013; Lloyd-Fox, Blasi, and Elwell 2010)\n\nOngoing maturation of the neurovascular coupling barrier? (Issard and Gervain 2018; Arichi et al. 2012)\n\n\n\nMovement, event during deep sleep\nWakefulness state: ~40 min. sleep cycles\nHead morphology: spatial registration is challenging\nEnvironment: hospital ward"
+  },
+  {
+    "objectID": "index.html#datasets",
+    "href": "index.html#datasets",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Datasets",
+    "text": "Datasets\n \n\n\nNeonates\nGarcía-Castro G., Sofocleous C., Gervain, J., Alarcón Allen A., and Santolin C. (in prep)\n\nAdults\nHernández-Sauret, A., García-Castro, G., & Redolar-Ripoll, E. (2026). Brain Topography, 39(1), 2. https://link.springer.com/article/10.1007/s10548-025-01157-4"
+  },
+  {
+    "objectID": "index.html#pipeline-suggestion",
+    "href": "index.html#pipeline-suggestion",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Pipeline suggestion",
+    "text": "Pipeline suggestion"
+  },
+  {
+    "objectID": "index.html#designing-a-preprocessing-pipeline",
+    "href": "index.html#designing-a-preprocessing-pipeline",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Designing a preprocessing pipeline",
+    "text": "Designing a preprocessing pipeline\nThe FRESH initiative\n \n\nYücel, M. A., Luke, R., Mesquita, R. C., von Lühmann, A., Mehler, D. M., Lührs, M., … & Zemanek, V. (2025). fNIRS reproducibility varies with data quality, analysis pipelines, and researcher experience. Communications biology, 8(1), 1149."
+  },
+  {
+    "objectID": "index.html#designing-a-preprocessing-pipeline-1",
+    "href": "index.html#designing-a-preprocessing-pipeline-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Designing a preprocessing pipeline",
+    "text": "Designing a preprocessing pipeline\nThe FRESH initiative\n \n\nAsked 38 research teams worldwide to independently analyze the same two fNIRS datasets.\nUsing different pipelines, nearly 80% of teams agreed on group-level results\nTeams with higher self-reported analysis confidence, which correlated with years of fNIRS experience, showed greater agreement\nMain sources of variability were related to how poor-quality data were handled"
+  },
+  {
+    "objectID": "index.html#designing-a-preprocessing-pipeline-2",
+    "href": "index.html#designing-a-preprocessing-pipeline-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Designing a preprocessing pipeline",
+    "text": "Designing a preprocessing pipeline\n \n\nGemignani, J., & Gervain, J. (2021). Comparing different pre-processing routines for infant fNIRS data. Developmental Cognitive Neuroscience, 48, 100943."
+  },
+  {
+    "objectID": "index.html#designing-a-preprocessing-pipeline-3",
+    "href": "index.html#designing-a-preprocessing-pipeline-3",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Designing a preprocessing pipeline",
+    "text": "Designing a preprocessing pipeline\n \n\nData quality/inclusion trade-off\n\n\nPerformance of all pipelines deteriorated with increasing levels of noise\nUse automatic motion artifact correction with caution: false negatives, reduced effect sizes, underestimation of the HRF\nThe ordering of some preprocessing steps does not impact conclusions overall"
+  },
+  {
+    "objectID": "index.html#software",
+    "href": "index.html#software",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Software",
+    "text": "Software\n \n\nHomer2/Homer3 (Huppert et al. 2009)\nMNE-Python (Gramfort et al. 2013), MNE-NIRS (Luke et al. 2021)\nAnalyzIR (Santosa et al. 2018)\nBrainstorm (Tadel et al. 2011), NIRStorm (Delaire et al. 2025)\nOxySoft (Artinis)\nNIRSTORM\nFieldtrip\nCedalion (Middell et al. 2026)"
+  },
+  {
+    "objectID": "index.html#software-1",
+    "href": "index.html#software-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Software",
+    "text": "Software\nCedalion (Middell et al. 2026)"
+  },
+  {
+    "objectID": "index.html#datasets-1",
+    "href": "index.html#datasets-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Datasets",
+    "text": "Datasets"
+  },
+  {
+    "objectID": "index.html#the-good-adult-data",
+    "href": "index.html#the-good-adult-data",
+    "title": "fNIRS in Neonatal Research",
+    "section": "The good: adult data",
+    "text": "The good: adult data\n\nImporting raw light intensity from .snirf file:\n\nfrom pathlib import Path\nfrom cedalion import io\n\nrec = io.read_snirf(Path(\"data/adult.snirf\"))[0]\n\nprint(rec)\n\n\nrec[\"amp\"]: Raw light intensity dataset\nrec[\"masks\"]: Signal quality masks\nrec[\"stim\"]: Dataset of events (e.g., stimulus triggers, annotations)\nrec[\"aux_ts\"]: Additional timeseries (e.g., accelerometer, heatbeat rate)"
+  },
+  {
+    "objectID": "index.html#the-good-adult-data-1",
+    "href": "index.html#the-good-adult-data-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "The good: adult data",
+    "text": "The good: adult data\n\n\n\nPlotting raw light intensity data with matplotlib:\n\n\n\nfrom matplotlib import pyplot as plt\n\namp = rec[\"amp\"]\n\nfig, axes = plt.subplots(2, 1)\n\nfor wl_i, wl in enumerate(amp.wavelength.values):\n    for ch in amp.channel.values:\n        d = amp.sel(wavelength=wl, channel=ch)\n        axes[wl_i].plot(d.time, d, c=\"k\", alpha=0.5)"
+  },
+  {
+    "objectID": "index.html#the-good-adult-data-2",
+    "href": "index.html#the-good-adult-data-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "The good: adult data",
+    "text": "The good: adult data"
+  },
+  {
+    "objectID": "index.html#the-good-adult-data-3",
+    "href": "index.html#the-good-adult-data-3",
+    "title": "fNIRS in Neonatal Research",
+    "section": "The good: adult data",
+    "text": "The good: adult data"
+  },
+  {
+    "objectID": "index.html#the-good-adult-data-4",
+    "href": "index.html#the-good-adult-data-4",
+    "title": "fNIRS in Neonatal Research",
+    "section": "The good: adult data",
+    "text": "The good: adult data"
+  },
+  {
+    "objectID": "index.html#the-good-adult-data-5",
+    "href": "index.html#the-good-adult-data-5",
+    "title": "fNIRS in Neonatal Research",
+    "section": "The good: adult data",
+    "text": "The good: adult data"
+  },
+  {
+    "objectID": "index.html#the-bad-breastfeeding-neonate",
+    "href": "index.html#the-bad-breastfeeding-neonate",
+    "title": "fNIRS in Neonatal Research",
+    "section": "The bad: breastfeeding neonate",
+    "text": "The bad: breastfeeding neonate"
+  },
+  {
+    "objectID": "index.html#the-bad-breastfeeding-neonate-1",
+    "href": "index.html#the-bad-breastfeeding-neonate-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "The bad: breastfeeding neonate",
+    "text": "The bad: breastfeeding neonate"
+  },
+  {
+    "objectID": "index.html#the-bad-breastfeeding-neonate-2",
+    "href": "index.html#the-bad-breastfeeding-neonate-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "The bad: breastfeeding neonate",
+    "text": "The bad: breastfeeding neonate"
+  },
+  {
+    "objectID": "index.html#the-ugly-sleeping-neonate",
+    "href": "index.html#the-ugly-sleeping-neonate",
+    "title": "fNIRS in Neonatal Research",
+    "section": "The ugly: sleeping neonate",
+    "text": "The ugly: sleeping neonate"
+  },
+  {
+    "objectID": "index.html#the-ugly-sleeping-neonate-1",
+    "href": "index.html#the-ugly-sleeping-neonate-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "The ugly: sleeping neonate",
+    "text": "The ugly: sleeping neonate"
+  },
+  {
+    "objectID": "index.html#the-ugly-sleeping-neonate-2",
+    "href": "index.html#the-ugly-sleeping-neonate-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "The ugly: sleeping neonate",
+    "text": "The ugly: sleeping neonate"
+  },
+  {
+    "objectID": "index.html#signal-quality",
+    "href": "index.html#signal-quality",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality",
+    "text": "Signal quality\n \n\n\nBefore data collection\nCalibration metrics:\n\nCoefficient of variation (CV)\nSignal-to-noise ratio (SNR)\nDark light\n\n\nAfter data collection\n\nSignal-to-noise ratio (SNR)\nScalp coupling index (SCI)\nPeak spectral power (PSP)\n\nCan be used before data collection too! (Pollonini, Bortfeld, and Oghalai 2016)"
+  },
+  {
+    "objectID": "index.html#signal-quality-after-data-collection",
+    "href": "index.html#signal-quality-after-data-collection",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality: after data collection",
+    "text": "Signal quality: after data collection\n \nScalp coupling index (SCI): Index of optode coupling with scalp based on cardiac pulse (Pollonini et al. 2014)\n\nBand-pass filter the signal in the heartbeat frequency of interest\nNormalize time series and segment into rolling windows (e.g., 5 seconds)\nFor each window: Zero-lag cross-correlation between time series in both wavelengths\nCompare against threshold\n\n\\[\n\\text{SCI} = \\rho_{X_{\\lambda_1}X_{\\lambda_2}}(t=0) = \\frac{{X_{\\lambda_1}}_{t} - \\bar{X}_{\\lambda_1} , {X_{\\lambda_2}}_{t} - \\bar{X}_{\\lambda_2}}{\\sigma_{\\lambda_1}\\sigma_{\\lambda_2}}\n\\]"
+  },
+  {
+    "objectID": "index.html#signal-quality-after-data-collection-1",
+    "href": "index.html#signal-quality-after-data-collection-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality: after data collection",
+    "text": "Signal quality: after data collection\n \nScalp coupling index (SCI): Index of optode coupling with scalp based on cardiac pulse (Pollonini et al. 2014)\n \nfrom cedalion.nirs import cw\nfrom cedalion.sigproc import quality\n\nod = cw.int2od(rec[\"amp\"])\nwindow_length = 5 * units.s\nsci, sci_mask = quality.sci(od, window_length, 0.8)"
+  },
+  {
+    "objectID": "index.html#signal-quality-after-data-collection-2",
+    "href": "index.html#signal-quality-after-data-collection-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality: after data collection",
+    "text": "Signal quality: after data collection"
+  },
+  {
+    "objectID": "index.html#signal-quality-after-data-collection-3",
+    "href": "index.html#signal-quality-after-data-collection-3",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality: after data collection",
+    "text": "Signal quality: after data collection\n \nScalp coupling index (SCI): Index of optode coupling with scalp based on cardiac pulse (Pollonini et al. 2014)\n \nLimitation: Motion arctifacts can inflate SCI (synchronised, high-amplitude perturbations in both signals)"
+  },
+  {
+    "objectID": "index.html#signal-quality-after-data-collection-4",
+    "href": "index.html#signal-quality-after-data-collection-4",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality: after data collection",
+    "text": "Signal quality: after data collection\n \nPeak spectral power (PSP): peak power of cross-correlation between both wavelengths in the hearbeat frequency range.\n\nSame as in SCI, now considering multiple lags (instead of just zero-lag)\nGet peak power across lags\nCompare against threshold\n\n\nRecommended in combination with SCI (Pollonini, Bortfeld, and Oghalai 2016)"
+  },
+  {
+    "objectID": "index.html#signal-quality-after-data-collection-5",
+    "href": "index.html#signal-quality-after-data-collection-5",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality: after data collection",
+    "text": "Signal quality: after data collection"
+  },
+  {
+    "objectID": "index.html#signal-quality-choosing-thresholds",
+    "href": "index.html#signal-quality-choosing-thresholds",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality: choosing thresholds",
+    "text": "Signal quality: choosing thresholds\n \nSample size vs. data quality trade-off.\nRecommendations:\n\nAdults: SCI=0.8, PSP=0.1 (Pollonini, Bortfeld, and Oghalai 2016)\nInfants: SCI=0.6, PSP=0.04-0.05 (Beaton et al. 2026)"
+  },
+  {
+    "objectID": "index.html#signal-quality-choosing-thresholds-1",
+    "href": "index.html#signal-quality-choosing-thresholds-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality: choosing thresholds",
+    "text": "Signal quality: choosing thresholds"
+  },
+  {
+    "objectID": "index.html#signal-quality-channel-pruning",
+    "href": "index.html#signal-quality-channel-pruning",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality: channel pruning",
+    "text": "Signal quality: channel pruning\n \nChannels with less than some threshold proportion of above-threshold windows are excluded from further analyses (e.g., 0.7).\n\nquality_mask = [time_clean &gt;= 0.7]\nrec[\"od\"], exc_ch = quality.prune_ch(rec[\"od\"], quality_mask, \"all\")\nod_pruned, drop_list = quality.prune_ch(rec[\"od\"], masks, \"all\")\n\nChannel interpolation? Work in progress."
+  },
+  {
+    "objectID": "index.html#signal-quality-channel-pruning-1",
+    "href": "index.html#signal-quality-channel-pruning-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality: channel pruning",
+    "text": "Signal quality: channel pruning"
+  },
+  {
+    "objectID": "index.html#signal-quality-channel-pruning-2",
+    "href": "index.html#signal-quality-channel-pruning-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality: channel pruning",
+    "text": "Signal quality: channel pruning"
+  },
+  {
+    "objectID": "index.html#signal-quality-channel-pruning-3",
+    "href": "index.html#signal-quality-channel-pruning-3",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Signal quality: channel pruning",
+    "text": "Signal quality: channel pruning"
+  },
+  {
+    "objectID": "index.html#motion-arctifact-attenuation",
+    "href": "index.html#motion-arctifact-attenuation",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Motion arctifact attenuation",
+    "text": "Motion arctifact attenuation\n \nMotion arctifacts (MA) are caused my changes optode position due to movement (cap slides around or separates from scalp).\nBrigadoi et al. (2014):\n\nSpikes: fast, high amplitude changes\nBaseline shifts\nDrift: low frequency variations"
+  },
+  {
+    "objectID": "index.html#motion-arctifact-attenuation-1",
+    "href": "index.html#motion-arctifact-attenuation-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Motion arctifact attenuation",
+    "text": "Motion arctifact attenuation\n \n\n\nExternal signals\n\nShort channel regression*\n\nBut see Emberson et al. (2016)\n\nAccelerometer (Cui et al. 2015)\n\n\nSignal correction methods\n\nWavelet filtering (Molavi and Dumont 2012)\nTemporal derivative distribution repair (TDDR) (Fishburn et al. 2019)\nSavitzky-Golay spline interpolation (Jahani et al. 2018)\nPrincipal component analysis (PCA)"
+  },
+  {
+    "objectID": "index.html#motion-arctifact-attenuation-2",
+    "href": "index.html#motion-arctifact-attenuation-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Motion arctifact attenuation",
+    "text": "Motion arctifact attenuation\n \nCurrent recommendation for pediatric data: combination of wavelet filtering and spline interpolation (Di Lorenzo et al. 2019).\nWe found TDDR + wavelet performed best in neonatal datasets (in-lab annecdotical data).\n \nfrom cedalion.sigproc import motion_correct\n\nod = motion_correct.tddr(motion_correct.wavelet(od))"
+  },
+  {
+    "objectID": "index.html#motion-arctifact-attenuation-3",
+    "href": "index.html#motion-arctifact-attenuation-3",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Motion arctifact attenuation",
+    "text": "Motion arctifact attenuation"
+  },
+  {
+    "objectID": "index.html#motion-arctifact-attenuation-4",
+    "href": "index.html#motion-arctifact-attenuation-4",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Motion arctifact attenuation",
+    "text": "Motion arctifact attenuation"
+  },
+  {
+    "objectID": "index.html#concentration-of-hbo-and-hbr",
+    "href": "index.html#concentration-of-hbo-and-hbr",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Concentration of HbO and HbR",
+    "text": "Concentration of HbO and HbR\n \ndpf_vals = [4.2, 5.3]\ndpf_coords = {\"wavelength\": rec[\"od\"].wavelength}\ndpf = xr.DataArray(dpf_vals, dims=\"wavelength\", coords=dpf_coords)\nrec[\"conc\"] = cw.od2conc(rec[\"od\"], rec.geo3d, dpf)\n\n\nDifferential pathlength factor (\\(\\overline{DPF}\\))\nConstant in the mBLL equation. Depends on the characteristics of the underlying biological tissue; choose age appropriate values."
+  },
+  {
+    "objectID": "index.html#concentration-of-hbo-and-hbr-1",
+    "href": "index.html#concentration-of-hbo-and-hbr-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Concentration of HbO and HbR",
+    "text": "Concentration of HbO and HbR"
+  },
+  {
+    "objectID": "index.html#concentration-of-hbo-and-hbr-2",
+    "href": "index.html#concentration-of-hbo-and-hbr-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Concentration of HbO and HbR",
+    "text": "Concentration of HbO and HbR"
+  },
+  {
+    "objectID": "index.html#concentration-of-hbo-and-hbr-3",
+    "href": "index.html#concentration-of-hbo-and-hbr-3",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Concentration of HbO and HbR",
+    "text": "Concentration of HbO and HbR"
+  },
+  {
+    "objectID": "index.html#physiological-arctifact-attenuation-frequency-filtering",
+    "href": "index.html#physiological-arctifact-attenuation-frequency-filtering",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Physiological arctifact attenuation: frequency filtering",
+    "text": "Physiological arctifact attenuation: frequency filtering\n\nHocke et al. (2018)"
+  },
+  {
+    "objectID": "index.html#physiological-arctifact-attenuation-frequency-filtering-1",
+    "href": "index.html#physiological-arctifact-attenuation-frequency-filtering-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Physiological arctifact attenuation: frequency filtering",
+    "text": "Physiological arctifact attenuation: frequency filtering\n \n\n\n\n\n\n\n\n\n\n\n\nHeartbeat\nRespiration\nMayer waves\nVery low frequency waves\n\n\n\n\nAdults\n1 Hz\n0.3 Hz\n0.1 Hz\n&lt; 0.04 Hz\n\n\nInfants\n1.17-3.17 Hz\n0.5-1 Hz\nUnknown\nUnknown\n\n\n\n \nfmin, fmax = 0.02, 0.5\nrec[\"conc\"] = rec[\"conc\"].cd.freq_filter(\n    fmin=fmin * units.Hz,\n    fmax=fmax * units.Hz,\n)"
+  },
+  {
+    "objectID": "index.html#physiological-arctifact-attenuation-frequency-filtering-2",
+    "href": "index.html#physiological-arctifact-attenuation-frequency-filtering-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Physiological arctifact attenuation: frequency filtering",
+    "text": "Physiological arctifact attenuation: frequency filtering"
+  },
+  {
+    "objectID": "index.html#physiological-arctifact-attenuation-frequency-filtering-3",
+    "href": "index.html#physiological-arctifact-attenuation-frequency-filtering-3",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Physiological arctifact attenuation: frequency filtering",
+    "text": "Physiological arctifact attenuation: frequency filtering"
+  },
+  {
+    "objectID": "index.html#physiological-arctifact-attenuation-frequency-filtering-4",
+    "href": "index.html#physiological-arctifact-attenuation-frequency-filtering-4",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Physiological arctifact attenuation: frequency filtering",
+    "text": "Physiological arctifact attenuation: frequency filtering"
+  },
+  {
+    "objectID": "index.html#physiological-arctifact-attenuation-frequency-filtering-5",
+    "href": "index.html#physiological-arctifact-attenuation-frequency-filtering-5",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Physiological arctifact attenuation: frequency filtering",
+    "text": "Physiological arctifact attenuation: frequency filtering"
+  },
+  {
+    "objectID": "index.html#physiological-arctifact-attenuation-frequency-filtering-6",
+    "href": "index.html#physiological-arctifact-attenuation-frequency-filtering-6",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Physiological arctifact attenuation: frequency filtering",
+    "text": "Physiological arctifact attenuation: frequency filtering"
+  },
+  {
+    "objectID": "index.html#epoching-and-averaging",
+    "href": "index.html#epoching-and-averaging",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Epoching and averaging",
+    "text": "Epoching and averaging\n\nprint(rec.stim)\n\n         onset  duration  value trial_type\n25   10.518528      10.0    1.0          A\n26  185.696256      10.0    1.0          A\n27  232.783872      10.0    1.0          A\n28  272.891904      10.0    1.0          A\n29  309.067776      10.0    1.0          A\n30  346.324992      10.0    1.0          A\n31  438.730752      10.0    1.0          A\n32  530.546688      10.0    1.0          A\n33  737.574912      10.0    1.0          A\n34  876.380160      10.0    1.0          A\n35   59.670528      10.0    1.0          B\n36  108.036096      10.0    1.0          B\n37  148.242432      10.0    1.0          B\n38  399.310848      10.0    1.0          B\n39  577.732608      10.0    1.0          B\n40  612.237312      10.0    1.0          B\n41  649.691136      10.0    1.0          B\n42  687.144960      10.0    1.0          B\n43  784.662528      10.0    1.0          B\n44  913.440768      10.0    1.0          B"
+  },
+  {
+    "objectID": "index.html#epoching-and-averaging-1",
+    "href": "index.html#epoching-and-averaging-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Epoching and averaging",
+    "text": "Epoching and averaging"
+  },
+  {
+    "objectID": "index.html#epoching-and-averaging-2",
+    "href": "index.html#epoching-and-averaging-2",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Epoching and averaging",
+    "text": "Epoching and averaging"
+  },
+  {
+    "objectID": "index.html#epoching-and-averaging-3",
+    "href": "index.html#epoching-and-averaging-3",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Epoching and averaging",
+    "text": "Epoching and averaging\nepochs = rec[\"conc\"].cd.to_epochs(\n    rec.stim,  # stimulus dataframe\n    [\"A\", \"B\"],  # select fingertapping events, discard others\n    before=5 * units.s,  # seconds before stimulus\n    after=30 * units.s,  # seconds after stimulus\n)\n# calculate baseline\nbaseline = epochs.sel(reltime=(epochs.reltime &lt; 0)).mean(\"reltime\")\n\n# subtract baseline\nepochs =- baseline\nepochs = epochs - baseline\nepochs = nirs.detrend_epochs(epochs)\n\n# average\nhrf = epochs.groupby(\"trial_type\").mean(\"epoch\")"
+  },
+  {
+    "objectID": "index.html#epoching-and-averaging-4",
+    "href": "index.html#epoching-and-averaging-4",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Epoching and averaging",
+    "text": "Epoching and averaging"
+  },
+  {
+    "objectID": "index.html#what-now",
+    "href": "index.html#what-now",
+    "title": "fNIRS in Neonatal Research",
+    "section": "What now?",
+    "text": "What now?"
+  },
+  {
+    "objectID": "index.html#skin-and-hair-type",
+    "href": "index.html#skin-and-hair-type",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Skin and hair type",
+    "text": "Skin and hair type\nYücel et al. (2025):\n\nFitzpatrick Skin Phototype Scale (I, II, III, IV)\nFischer-Saller Scale, Andre Walker Hair Typing System, and the FIA Hair Typing System"
+  },
+  {
+    "objectID": "index.html#functional-near-infrared-spectroscopy-7",
+    "href": "index.html#functional-near-infrared-spectroscopy-7",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Functional Near-Infrared Spectroscopy",
+    "text": "Functional Near-Infrared Spectroscopy\nIf we shine near-infrared light into biological tissue, we can estimate changes in relative concentration of HbO and HbR time (functional).\n\nmodified Beer-Lambert Law (mBLL)\n\n\\[\n\\begin{aligned}\n\\Delta A(\\lambda_1 = 760~nm) &= \\text{DPF} \\cdot r \\cdot [  \\epsilon_{HbO}(\\lambda_1) \\Delta c_{HbO} + \\epsilon_{HbO}(\\lambda_1) \\Delta c_{HbO} ]  \n\\\\\n\\Delta A(\\lambda_2 = 850~nm) &= \\text{DPF} \\cdot r \\cdot [  \\epsilon_{HbO}(\\lambda_2) \\Delta c_{HbR} + \\epsilon_{HbR}(\\lambda_2) \\Delta c_{HbR} ]\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "index.html#hardware",
+    "href": "index.html#hardware",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Hardware",
+    "text": "Hardware\n \n\nNIRx (Germany): NIRSport2\nArtinis (The Netherlands): Brite, OxyMon\nHitachi (Japan): ETG 4000\nGowerLabs (UK): LUMO (HD-DOT system)\nCortivision (Poland): Spectrum C23 fNIRS\nPIONIRS (Italy): NIRSBOX"
+  },
+  {
+    "objectID": "index.html#designing-a-preprocessing-pipeline-4",
+    "href": "index.html#designing-a-preprocessing-pipeline-4",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Designing a preprocessing pipeline",
+    "text": "Designing a preprocessing pipeline\nThe FRESH initiative"
+  },
+  {
+    "objectID": "index.html#designing-a-preprocessing-pipeline-5",
+    "href": "index.html#designing-a-preprocessing-pipeline-5",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Designing a preprocessing pipeline",
+    "text": "Designing a preprocessing pipeline\nThe FRESH initiative"
+  },
+  {
+    "objectID": "index.html#data-organisation-bids-format",
+    "href": "index.html#data-organisation-bids-format",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Data organisation: BIDS format",
+    "text": "Data organisation: BIDS format\nbids.neuroimaging.io\n\nProposed standard for neuroimaging datasets (EEG, fNIRS, MRI, etc.)\nAdopted and encouraged by the Society for fNIRS (SFNIRS)\nIncreases reproducibility, transparency, and documentation\nReady to share in BIDS-compliant repositories (e.g., OpenNeuro.)"
+  },
+  {
+    "objectID": "index.html#data-organisation-bids-format-1",
+    "href": "index.html#data-organisation-bids-format-1",
+    "title": "fNIRS in Neonatal Research",
+    "section": "Data organisation: BIDS format",
+    "text": "Data organisation: BIDS format\nLuke, R., Oostenveld, R., Cockx, H., Niso, G., Shader, M. J., Orihuela-Espina, F., … & Pollonini, L. (2025). NIRS-BIDS: brain imaging data structure extended to near-infrared spectroscopy. Scientific Data, 12(1), 159."
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "fNIRS in Neonatal Research",
+    "section": "References",
+    "text": "References\n\n\n\n\nArichi, Tomoki, Gianlorenzo Fagiolo, Marta Varela, Alejandro Melendez-Calderon, Alessandro Allievi, Nazakat Merchant, Nora Tusor, et al. 2012. “Development of BOLD Signal Hemodynamic Responses in the Human Brain.” NeuroImage 63 (2): 663–73. https://doi.org/10.1016/j.neuroimage.2012.06.054.\n\n\nBeaton, Samuel, Borja Blanco, Chiara Bulgarelli, Clare E Elwell, Sarah Lloyd-Fox, Ebrima Mbye, Samantha McCann, Anna Blasi Ribera, and Sophie E Moore. 2026. “Investigating the Effect of Channel Pruning on Functional Near-Infrared Spectroscopy Data Collected from Children Aged 5 to 24 Months.” Neurophotonics 13 (1): 015011–11.\n\n\nBrigadoi, Sabrina, Lisa Ceccherini, Simone Cutini, Fabio Scarpa, Pietro Scatturin, Juliette Selb, Louis Gagnon, David A Boas, and Robert J Cooper. 2014. “Motion Artifacts in Functional Near-Infrared Spectroscopy: A Comparison of Motion Correction Techniques Applied to Real Cognitive Data.” Neuroimage 85: 181–91.\n\n\nCinciute, Sigita. 2019. “Translating the Hemodynamic Response: Why Focused Interdisciplinary Integration Should Matter for the Future of Functional Neuroimaging.” PeerJ 7: e6621.\n\n\nCristia, Alejandrina, Emmanuel Dupoux, Yoko Hakuno, Sarah Lloyd-Fox, Manuela Schuetze, José Kivits, Tomas Bergvelt, et al. 2013. “An Online Database of Infant Functional Near Infrared Spectroscopy Studies: A Community-Augmented Systematic Review.” PloS One 8 (3): e58906.\n\n\nCui, XU, Joseph M Baker, Ning Liu, and Allan L Reiss. 2015. “Sensitivity of fNIRS Measurement to Head Motion: An Applied Use of Smartphones in the Lab.” Journal of Neuroscience Methods 245: 37–43.\n\n\nDelaire, Édouard, Thomas Vincent, Zhengchen Cai, Alexis Machado, Laurent Hugueville, Denis Schwartz, Francois Tadel, et al. 2025. “NIRSTORM: A Brainstorm Extension Dedicated to Functional Near-Infrared Spectroscopy Data Analysis, Advanced 3D Reconstructions, and Optimal Probe Design.” Neurophotonics 12 (2): 025011–11.\n\n\nDi Lorenzo, Renata, Laura Pirazzoli, Anna Blasi, Chiara Bulgarelli, Yoko Hakuno, Yasuyo Minagawa, and Sabrina Brigadoi. 2019. “Recommendations for Motion Correction of Infant fNIRS Data Applicable to Multiple Data Sets and Acquisition Systems.” NeuroImage 200 (October): 511–27. https://doi.org/10.1016/j.neuroimage.2019.06.056.\n\n\nEmberson, Lauren L, Stephen L Crosswhite, James R Goodwin, Andrew J Berger, and Richard N Aslin. 2016. “Isolating the Effects of Surface Vasculature in Infant Neuroimaging Using Short-Distance Optical Channels: A Combination of Local and Global Effects.” Neurophotonics 3 (3): 031406–6.\n\n\nFishburn, Frank A., Ruth S. Ludlum, Chandan J. Vaidya, and Andrei V. Medvedev. 2019. “Temporal Derivative Distribution Repair (TDDR): A Motion Correction Method for fNIRS.” NeuroImage 184 (January): 171–79. https://doi.org/10.1016/j.neuroimage.2018.09.025.\n\n\nGramfort, Alexandre, Martin Luessi, Eric Larson, Denis A. Engemann, Daniel Strohmeier, Christian Brodbeck, Roman Goj, et al. 2013. “MEG and EEG Data Analysis with MNE-Python.” Frontiers in Neuroscience 7 (December). https://doi.org/10.3389/fnins.2013.00267.\n\n\nHocke, Lia M, Ibukunoluwa K Oni, Chris C Duszynski, Alex V Corrigan, Blaise deB Frederick, and Jeff F Dunn. 2018. “Automated Processing of fNIRS Data—a Visual Guide to the Pitfalls and Consequences.” Algorithms 11 (5): 67.\n\n\nHramov, Alexander E, Vadim Grubov, Artem Badarin, Vladimir A Maksimenko, and Alexander N Pisarchik. 2020. “Functional Near-Infrared Spectroscopy for the Classification of Motor-Related Brain Activity on the Sensor-Level.” Sensors 20 (8): 2362.\n\n\nHuppert, Theodore J., Solomon G. Diamond, Maria A. Franceschini, and David A. Boas. 2009. “HomER: A Review of Time-Series Analysis Methods for Near-Infrared Spectroscopy of the Brain.” Applied Optics 48 (10): D280–98. https://doi.org/10.1364/AO.48.00D280.\n\n\nIssard, Cécile, and Judit Gervain. 2018. “Variability of the Hemodynamic Response in Infants: Influence of Experimental Design and Stimulus Complexity.” Developmental Cognitive Neuroscience, Methodological Challenges in Developmental Neuroimaging: Contemporary Approaches and Solutions, 33 (October): 182–93. https://doi.org/10.1016/j.dcn.2018.01.009.\n\n\nJahani, Sahar, Seyed K Setarehdan, David A Boas, and Meryem A Yücel. 2018. “Motion Artifact Detection and Correction in Functional Near-Infrared Spectroscopy: A New Hybrid Method Based on Spline Interpolation Method and Savitzky–Golay Filtering.” Neurophotonics 5 (1): 015003–3.\n\n\nLloyd-Fox, Sarah, Anna Blasi, and Clare E Elwell. 2010. “Illuminating the Developing Brain: The Past, Present and Future of Functional Near Infrared Spectroscopy.” Neuroscience & Biobehavioral Reviews 34 (3): 269–84.\n\n\nLuke, Robert, Eric Larson, Maureen J Shader, Hamish Innes-Brown, Lindsey Van Yper, Adrian KC Lee, Paul F Sowman, and David McAlpine. 2021. “Analysis Methods for Measuring Passive Auditory fNIRS Responses Generated by a Block-Design Paradigm.” Neurophotonics 8 (2): 025008–8.\n\n\nMiddell, E., L. Carlton, S. Moradi, T. Codina, T. Fischer, J. Cutler, S. Kelley, et al. 2026. “Cedalion Tutorial: A Python-based Framework for Comprehensive Analysis of Multimodal fNIRS & DOT from the Lab to the Everyday World.” arXiv. https://doi.org/10.48550/arXiv.2601.05923.\n\n\nMolavi, Behnam, and Guy A Dumont. 2012. “Wavelet-Based Motion Artifact Removal for Functional Near-Infrared Spectroscopy.” Physiological Measurement 33 (2): 259. https://doi.org/10.1088/0967-3334/33/2/259.\n\n\nPollonini, Luca, Heather Bortfeld, and John S. Oghalai. 2016. “PHOEBE: A Method for Real Time Mapping of Optodes-Scalp Coupling in Functional Near-Infrared Spectroscopy.” Biomedical Optics Express 7 (12): 5104–19. https://doi.org/10.1364/BOE.7.005104.\n\n\nPollonini, Luca, Cristen Olds, Homer Abaya, Heather Bortfeld, Michael S Beauchamp, and John S Oghalai. 2014. “Auditory Cortex Activation to Natural Speech and Simulated Cochlear Implant Speech Measured with Functional Near-Infrared Spectroscopy.” Hearing Research 309: 84–93.\n\n\nSantosa, Hendrik, Xuetong Zhai, Frank Fishburn, and Theodore Huppert. 2018. “The NIRS Brain AnalyzIR Toolbox.” Algorithms 11 (5): 73.\n\n\nStute, Katharina, Louisa K Gossé, Samuel Montero-Hernandez, Guy A Perkins, Meryem A Yücel, Simone Cutini, Turgut Durduran, et al. 2025. “The fNIRS Glossary Project: A Consensus-Based Resource for Functional Near-Infrared Spectroscopy Terminology.” Neurophotonics 12 (2): 027801–1.\n\n\nTadel, François, Sylvain Baillet, John C Mosher, Dimitrios Pantazis, and Richard M Leahy. 2011. “Brainstorm: A User-Friendly Application for MEG/EEG Analysis.” Computational Intelligence and Neuroscience 2011 (1): 879716.\n\n\nYücel, Meryem A., Jessica E. Anderson, De’Ja Rogers, Parisa Hajirahimi, Parya Farzam, Yuanyuan Gao, Rini I. Kaplan, et al. 2025. “Quantifying the Impact of Hair and Skin Characteristics on fNIRS Signal Quality for Enhanced Inclusivity.” Nature Human Behaviour, September. https://doi.org/10.1038/s41562-025-02274-7."
+  }
+]
