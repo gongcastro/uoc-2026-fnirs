@@ -1,6 +1,8 @@
 project:
   render: 
     - index.qmd
+  output-dir: docs
+  execute-dir: project
 
 title: fNIRS in Neonatal Research
 subtitle: Experimental design, data analysis and real-data preprocessing with Python
